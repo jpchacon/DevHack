@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">DevHack</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="programs_or_workshop">Programas o workshop</string>
+    <string name="Work_offers">Ofertas de trabajo</string>
+    <string name="contact_us">Contactanos</string>
+
+
+
+
+</resources>
