@@ -34,13 +34,13 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:theme="@style/textViewCardView"
+                    style="@style/textViewCardView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Programa:" />
 
                 <TextView
-                    android:theme="@style/textViewInformationCardView"
+                    style="@style/textViewInformationCardView"
                     android:layout_marginLeft="@dimen/marginleft_text_specifications"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -54,13 +54,13 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:theme="@style/textViewCardView"
+                    style="@style/textViewCardView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Inicia:" />
 
                 <TextView
-                    android:theme="@style/textViewInformationCardView"
+                    style="@style/textViewInformationCardView"
                     android:layout_marginLeft="@dimen/marginleft_text_specifications"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -74,13 +74,13 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:theme="@style/textViewCardView"
+                    style="@style/textViewCardView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Duración:" />
 
                 <TextView
-                    android:theme="@style/textViewInformationCardView"
+                    style="@style/textViewInformationCardView"
                     android:layout_marginLeft="@dimen/marginleft_text_specifications"
 
                     android:layout_width="wrap_content"
@@ -88,9 +88,6 @@
                     android:text="9 Días" />
 
             </LinearLayout>
-
-
-
         </LinearLayout>
     </LinearLayout>
 
