@@ -1,6 +1,7 @@
 package co.devhack.presentation.view.activitys;
 
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -22,6 +23,8 @@ import co.devhack.presentation.view.fragments.ListWork;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +48,12 @@ public class MainActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
         replaceFragment(ListPrograms.getInstance());
+        selectMenuItem(R.id.nav_programs);
+
     }
 
     @Override
@@ -88,11 +94,11 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_programs) {
             replaceFragment(ListPrograms.getInstance());
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_work) {
             replaceFragment(ListWork.getInstance());
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_contacts) {
 
         } else if (id == R.id.nav_manage) {
 
@@ -106,10 +112,15 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+    public void selectMenuItem(@IdRes int id) {
+        MenuItem item = navigationView.getMenu().findItem(id);
+        if(!item.isChecked()) {
+            item.setChecked(true);
+        }
+    }
 
     public void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
-
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.container, fragment);
         fragmentTransaction.commit();
