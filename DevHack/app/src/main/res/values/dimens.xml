@@ -13,5 +13,5 @@
     <dimen name="marginleft_text_specifications">10dp</dimen>
     <dimen name="text_zise_cardview">18sp</dimen>
 
-    <dimen name="margintop_cardview_work">10sp</dimen>
+    <dimen name="margintop_cardview_work">6dp</dimen>
 </resources>
