@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
     public void selectMenuItem(@IdRes int id) {
         MenuItem item = navigationView.getMenu().findItem(id);
         if(!item.isChecked()) {

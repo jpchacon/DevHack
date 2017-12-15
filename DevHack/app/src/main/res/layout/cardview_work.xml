@@ -26,6 +26,7 @@
                 android:layout_marginLeft="20dp"/>
 
             <TextView
+                android:id="@+id/tvEmpresa"
                 style="@style/textViewInformationCardView"
                 android:layout_marginLeft="@dimen/marginleft_text_specifications"
                 android:layout_width="wrap_content"
@@ -48,6 +49,7 @@
                 android:layout_marginLeft="20dp" />
 
             <TextView
+                android:id="@+id/tvCargo"
                 style="@style/textViewInformationCardView"
                 android:layout_marginLeft="@dimen/marginleft_text_specifications"
                 android:layout_width="wrap_content"
@@ -70,6 +72,7 @@
                 android:layout_marginLeft="20dp"/>
 
             <TextView
+                android:id="@+id/tvFecha"
                 style="@style/textViewInformationCardView"
                 android:layout_marginLeft="@dimen/marginleft_text_specifications"
                 android:layout_width="wrap_content"
