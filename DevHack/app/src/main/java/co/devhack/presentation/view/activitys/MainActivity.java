@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import co.devhack.R;
+import co.devhack.presentation.view.dialog.ContactsDialog;
 import co.devhack.presentation.view.fragments.ListPrograms;
 import co.devhack.presentation.view.fragments.ListWork;
 
@@ -99,7 +100,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_work) {
             replaceFragment(ListWork.getInstance());
         } else if (id == R.id.nav_contacts) {
-
+            ContactsDialog contactsDialog = ContactsDialog.getInstance();
+            contactsDialog.show(getSupportFragmentManager(),null);
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
