@@ -19,14 +19,14 @@
             android:layout_marginTop="@dimen/margintop_cardview_work">
 
             <TextView
-                android:theme="@style/textViewCardView"
+                style="@style/textViewCardView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Empresa:"
                 android:layout_marginLeft="20dp"/>
 
             <TextView
-                android:theme="@style/textViewInformationCardView"
+                style="@style/textViewInformationCardView"
                 android:layout_marginLeft="@dimen/marginleft_text_specifications"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -41,14 +41,14 @@
             android:layout_marginTop="@dimen/margintop_cardview_work">
 
             <TextView
-                android:theme="@style/textViewCardView"
+                style="@style/textViewCardView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cargo:"
                 android:layout_marginLeft="20dp" />
 
             <TextView
-                android:theme="@style/textViewInformationCardView"
+                style="@style/textViewInformationCardView"
                 android:layout_marginLeft="@dimen/marginleft_text_specifications"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -63,14 +63,14 @@
             android:layout_marginTop="@dimen/margintop_cardview_work">
 
             <TextView
-                android:theme="@style/textViewCardView"
+                style="@style/textViewCardView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tipo:"
                 android:layout_marginLeft="20dp"/>
 
             <TextView
-                android:theme="@style/textViewInformationCardView"
+                style="@style/textViewInformationCardView"
                 android:layout_marginLeft="@dimen/marginleft_text_specifications"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
