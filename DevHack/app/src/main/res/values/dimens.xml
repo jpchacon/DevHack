@@ -9,7 +9,7 @@
     <dimen name="cornerradius_cardview">4dp</dimen>
     <dimen name="height_cardview">100dp</dimen>
     <dimen name="marginleft_image_programs">20dp</dimen>
-    <dimen name="marginleft_text_programs">30dp</dimen>
+    <dimen name="marginleft_text_programs">20dp</dimen>
     <dimen name="marginleft_text_specifications">10dp</dimen>
     <dimen name="text_zise_cardview">18sp</dimen>
 
