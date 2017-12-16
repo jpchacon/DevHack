@@ -12,6 +12,7 @@ public interface ListWorkContract {
 
     interface View {
         void refreshTodos();
+        void errorMenssagge(Exception e);
     }
 
     interface UserActionsListener {
