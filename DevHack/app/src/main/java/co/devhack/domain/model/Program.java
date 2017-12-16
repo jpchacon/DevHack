@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by Juanpa on 14/12/2017.
  */
-public class Programs {
+public class Program {
     private Integer id;
     private String image;
     private String description;
@@ -29,7 +29,7 @@ public class Programs {
      * @param investment
 
      */
-    public Programs(String image, String description, Date startDate, String duration,
+    public Program(String image, String description, Date startDate, String duration,
                     String schedules, List<String> modules, List<String> themes,
                     String investment) {
         this.image = image;

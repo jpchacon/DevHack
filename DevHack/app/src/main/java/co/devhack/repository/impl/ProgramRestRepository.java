@@ -4,7 +4,7 @@ import java.util.List;
 
 import co.devhack.domain.model.Programs;
 import co.devhack.helpers.RetrofitSingleton;
-import co.devhack.repository.ProgramsRepository;
+import co.devhack.repository.ProgramRepository;
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
@@ -14,7 +14,7 @@ import retrofit2.http.GET;
  * Created by Juanpa on 16/12/2017.
  */
 
-public class ProgramRestRepository  implements ProgramsRepository {
+public class ProgramRestRepository  implements ProgramRepository {
 
     public interface ProgramService {
 

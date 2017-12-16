@@ -2,7 +2,7 @@ package co.devhack.domain.usecase;
 
 import java.util.List;
 
-import co.devhack.domain.model.Programs;
+import co.devhack.domain.model.Program;
 import co.devhack.helpers.Callback;
 
 /**
@@ -11,5 +11,5 @@ import co.devhack.helpers.Callback;
 
 public interface ProgramUseCase {
 
-    void getAll(Callback<List<Programs>> callback);
+    void getAll(Callback<List<Program>> callback);
 }
