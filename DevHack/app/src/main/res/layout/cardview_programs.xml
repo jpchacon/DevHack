@@ -15,6 +15,7 @@
 
 
         <ImageView
+            android:id="@+id/ivLogoProgram"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@mipmap/ic_launcher"
@@ -40,6 +41,7 @@
                     android:text="Programa:" />
 
                 <TextView
+                    android:id="@+id/tvProgram"
                     style="@style/textViewInformationCardView"
                     android:layout_marginLeft="@dimen/marginleft_text"
                     android:layout_width="wrap_content"
@@ -60,6 +62,7 @@
                     android:text="Inicia:" />
 
                 <TextView
+                    android:id="@+id/tvStartDate"
                     style="@style/textViewInformationCardView"
                     android:layout_marginLeft="@dimen/marginleft_text"
                     android:layout_width="wrap_content"
@@ -80,9 +83,9 @@
                     android:text="Duración:" />
 
                 <TextView
+                    android:id="@+id/tvDuration"
                     style="@style/textViewInformationCardView"
                     android:layout_marginLeft="@dimen/marginleft_text"
-
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="9 Días" />
