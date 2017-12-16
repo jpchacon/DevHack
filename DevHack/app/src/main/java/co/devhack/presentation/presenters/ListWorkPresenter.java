@@ -37,10 +37,10 @@ public class ListWorkPresenter implements ListWorkContract.UserActionsListener {
 
             @Override
             public void error(Exception error) {
-                //TODO MOSTRAR ERROR
+                //Todo revisar esto
+                view.errorMenssagge(error);
             }
         });
-
     }
 
     @Override
