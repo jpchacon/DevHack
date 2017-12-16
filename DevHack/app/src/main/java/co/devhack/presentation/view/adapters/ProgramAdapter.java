@@ -7,19 +7,22 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 import co.devhack.R;
-import co.devhack.domain.model.Programs;
+import co.devhack.domain.model.Program;
+import co.devhack.helpers.Utilities;
 
 /**
  * Created by Juanpa on 14/12/2017.
  */
-public class ProgramsAdapter extends RecyclerView.Adapter<ProgramsAdapter.ProgramsViewHolder>{
+public class ProgramAdapter extends RecyclerView.Adapter<ProgramAdapter.ProgramsViewHolder>{
 
-    private List<Programs> dataSet;
+    private List<Program> dataSet;
 
-    public ProgramsAdapter(List<Programs> dataSet) {
+    public ProgramAdapter(List<Program> dataSet) {
         this.dataSet = dataSet;
     }
 
@@ -31,14 +34,14 @@ public class ProgramsAdapter extends RecyclerView.Adapter<ProgramsAdapter.Progra
 
     @Override
     public void onBindViewHolder(ProgramsViewHolder holder, int position) {
-        Programs programs = dataSet.get(position);
+        Program program = dataSet.get(position);
 
-        //TODO ivLogoProgram
-        //holder.ivLogoProgram.setImageDrawable();
-        holder.tvProgram.setText(programs.getDescription());
-        holder.tvStartDate.setText(programs.getStartDate().toString());
-        //TODO FORMATEAR FECHA USANDO java.text.SimpleDateFormat
-        holder.tvDuration.setText(programs.getDuration());
+        if(!Utilities.isEmpty(program.getImage())) {
+            Glide.with(holder.itemView).load(program.getImage()).into(holder.ivLogoProgram);
+        }
+        holder.tvProgram.setText(program.getDescription());
+        holder.tvStartDate.setText(program.getStartDate().toString());
+        holder.tvDuration.setText(program.getDuration());
     }
 
     @Override
