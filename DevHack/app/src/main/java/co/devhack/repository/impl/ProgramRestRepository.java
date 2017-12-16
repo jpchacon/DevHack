@@ -2,7 +2,7 @@ package co.devhack.repository.impl;
 
 import java.util.List;
 
-import co.devhack.domain.model.Programs;
+import co.devhack.domain.model.Program;
 import co.devhack.helpers.RetrofitSingleton;
 import co.devhack.repository.ProgramRepository;
 import retrofit2.Call;
@@ -19,16 +19,16 @@ public class ProgramRestRepository  implements ProgramRepository {
     public interface ProgramService {
 
         @GET("programs.json")
-        Call<List<Programs>> getAll();
+        Call<List<Program>> getAll();
     }
 
     @Override
-    public List<Programs> getAll() throws Exception {
+    public List<Program> getAll() throws Exception {
         Retrofit retrofit = RetrofitSingleton.getInstance();
         ProgramService todoService = retrofit.create(ProgramService.class);
-        Call<List<Programs>> call = todoService.getAll();
+        Call<List<Program>> call = todoService.getAll();
 
-        Response<List<Programs>> response = call.execute();
+        Response<List<Program>> response = call.execute();
 
         return response.body();
     }
