@@ -68,8 +68,17 @@
                 style="@style/textViewCardView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tipo:"
+                android:text="Tipo"
                 android:layout_marginLeft="20dp"/>
+
+            <TextView
+                style="@style/textViewInformationCardView"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginleft_text"
+                android:text="@string/separacion" />
 
             <TextView
                 android:id="@+id/tvFecha"

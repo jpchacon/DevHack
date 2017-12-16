@@ -18,11 +18,6 @@
     <string name="cell_phone_number">316 871 1557</string>
     <string name="e_mail">hola@devhack.co</string>
     <string name="location">Cali, Colombia</string>
-
-
-
-
-
-
+    <string name="separacion">-</string>
 
 </resources>
