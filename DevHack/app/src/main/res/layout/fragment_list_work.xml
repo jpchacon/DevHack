@@ -13,7 +13,12 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_horizontal_margin">
 
-        <include layout="@layout/cardview_work"></include>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvWorkList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
 
     </LinearLayout>
 
