@@ -20,7 +20,7 @@ import retrofit2.http.Path;
 public class WorkRestRepository implements WorkRepository {
 
     public interface WorkService{
-        @GET("work.json")
+        @GET("works.json")
         Call<List<Work>> getAll();
     }
 

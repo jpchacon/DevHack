@@ -3,6 +3,8 @@ package co.devhack.helpers;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static co.devhack.helpers.Constants.API_URI;
+
 /**
  * Created by Juanpa on 16/12/2017.
  */
@@ -13,7 +15,7 @@ public class RetrofitSingleton {
 
     public static Retrofit getInstance() {
         if(retrofit == null) {
-            retrofit = getInstance("https://todoapp-79895.firebaseio.com/");
+            retrofit = getInstance(API_URI);
         }
 
         return retrofit;
