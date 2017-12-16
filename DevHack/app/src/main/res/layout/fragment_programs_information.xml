@@ -12,12 +12,14 @@
 
 
     <ImageView
+        android:id="@+id/ivLogoProgram"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_launcher"
         android:layout_marginTop="@dimen/margintop_layout"/>
 
     <TextView
+        android:id="@+id/tvProgram"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -37,6 +39,7 @@
             android:layout_marginLeft="20dp"/>
 
         <TextView
+            android:id="@+id/tvStartDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="01 de Enero de 2018"
@@ -56,6 +59,7 @@
             android:layout_marginLeft="20dp"/>
 
         <TextView
+            android:id="@+id/tvDuration"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="9 Dias"
@@ -75,6 +79,7 @@
             android:layout_marginLeft="20dp"/>
 
         <TextView
+            android:id="@+id/tvSchedules"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textMultiLine"
@@ -101,6 +106,7 @@
             android:layout_marginLeft="@dimen/marginleft_text"/>
 
         <TextView
+            android:id="@+id/tvInvestment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="650.000"
@@ -120,5 +126,10 @@
         android:gravity="center"
         android:text="Contenido"
         android:layout_marginTop="@dimen/margintop_informations"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvContentList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
