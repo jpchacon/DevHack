@@ -7,19 +7,19 @@ import co.devhack.domain.model.Program;
 import co.devhack.domain.usecase.ProgramUseCase;
 import co.devhack.domain.usecase.impl.ProgramUseCaseImpl;
 import co.devhack.helpers.Callback;
-import co.devhack.presentation.interfaces.ProgramListContract;
+import co.devhack.presentation.interfaces.ListProgramContract;
 
 /**
  * Created by cdcalvo on 16/12/17.
  */
 
-public class ProgramListPresenter implements ProgramListContract.UserActionsListener {
+public class ListProgramPresenter implements ListProgramContract.UserActionsListener {
 
-    private ProgramListContract.View view;
+    private ListProgramContract.View view;
     private ProgramUseCase programUseCase;
     private List<Program> lstPrograms;
 
-    public ProgramListPresenter(ProgramListContract.View view) {
+    public ListProgramPresenter(ListProgramContract.View view) {
         this.view = view;
         this.programUseCase = new ProgramUseCaseImpl();
         this.lstPrograms = new ArrayList<>(0);

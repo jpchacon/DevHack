@@ -8,7 +8,7 @@ import co.devhack.domain.model.Program;
  * Created by cdcalvo on 16/12/17.
  */
 
-public interface ProgramListContract {
+public interface ListProgramContract {
 
     interface View {
 

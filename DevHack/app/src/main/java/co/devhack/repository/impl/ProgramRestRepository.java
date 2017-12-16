@@ -25,8 +25,8 @@ public class ProgramRestRepository  implements ProgramRepository {
     @Override
     public List<Program> getAll() throws Exception {
         Retrofit retrofit = RetrofitSingleton.getInstance();
-        ProgramService todoService = retrofit.create(ProgramService.class);
-        Call<List<Program>> call = todoService.getAll();
+        ProgramService programService = retrofit.create(ProgramService.class);
+        Call<List<Program>> call = programService.getAll();
 
         Response<List<Program>> response = call.execute();
 
