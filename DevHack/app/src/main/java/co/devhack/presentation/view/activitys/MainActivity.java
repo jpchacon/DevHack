@@ -88,16 +88,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_work) {
             replaceFragment(ListWork.getInstance());
         } else if (id == R.id.nav_contacts) {
-<<<<<<< HEAD
             ContactsDialog contactsDialog = ContactsDialog.getInstance();
             contactsDialog.show(getSupportFragmentManager(),null);
         } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-=======
->>>>>>> 1a1c76a843f8dc63290ddffc87c3196b3519b293
 
         }
 

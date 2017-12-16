@@ -15,14 +15,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_launcher"
-        android:layout_marginTop="@dimen/margintop_informations_programs"/>
+        android:layout_marginTop="@dimen/margintop_layout"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Programa"
-        android:layout_marginTop="@dimen/margintop_informations_programs"/>
+        android:layout_marginTop="@dimen/margintop_layout"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="01 de Enero de 2018"
-            android:layout_marginLeft="@dimen/marginleft_text_specifications"/>
+            android:layout_marginLeft="@dimen/marginleft_text"/>
 
     </LinearLayout>
 
@@ -59,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="9 Dias"
-            android:layout_marginLeft="@dimen/marginleft_text_specifications"/>
+            android:layout_marginLeft="@dimen/marginleft_text"/>
 
     </LinearLayout>
 
@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:text="Lunes, Miercoles y viernes 6 - 10 pm"
-            android:layout_marginLeft="@dimen/marginleft_text_specifications"/>
+            android:layout_marginLeft="@dimen/marginleft_text"/>
 
     </LinearLayout>
 
@@ -98,19 +98,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="$"
-            android:layout_marginLeft="@dimen/marginleft_text_specifications"/>
+            android:layout_marginLeft="@dimen/marginleft_text"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="650.000"
-            android:layout_marginLeft="@dimen/marginleft_text_specifications"/>
+            android:layout_marginLeft="@dimen/marginleft_text"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pesos"
-            android:layout_marginLeft="@dimen/marginleft_text_specifications"/>
+            android:layout_marginLeft="@dimen/marginleft_text"/>
 
     </LinearLayout>
 

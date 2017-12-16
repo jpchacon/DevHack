@@ -28,7 +28,7 @@
             <TextView
                 android:id="@+id/tvEmpresa"
                 style="@style/textViewInformationCardView"
-                android:layout_marginLeft="@dimen/marginleft_text_specifications"
+                android:layout_marginLeft="@dimen/marginleft_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="El lab coworking"/>
@@ -51,7 +51,7 @@
             <TextView
                 android:id="@+id/tvCargo"
                 style="@style/textViewInformationCardView"
-                android:layout_marginLeft="@dimen/marginleft_text_specifications"
+                android:layout_marginLeft="@dimen/marginleft_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Desarrollador Android"/>
@@ -74,7 +74,7 @@
             <TextView
                 android:id="@+id/tvFecha"
                 style="@style/textViewInformationCardView"
-                android:layout_marginLeft="@dimen/marginleft_text_specifications"
+                android:layout_marginLeft="@dimen/marginleft_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Fecha" />

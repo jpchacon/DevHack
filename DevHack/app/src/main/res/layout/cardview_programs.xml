@@ -41,7 +41,7 @@
 
                 <TextView
                     style="@style/textViewInformationCardView"
-                    android:layout_marginLeft="@dimen/marginleft_text_specifications"
+                    android:layout_marginLeft="@dimen/marginleft_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Frontend Angular" />
@@ -61,7 +61,7 @@
 
                 <TextView
                     style="@style/textViewInformationCardView"
-                    android:layout_marginLeft="@dimen/marginleft_text_specifications"
+                    android:layout_marginLeft="@dimen/marginleft_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="01 Enero 2018" />
@@ -81,7 +81,7 @@
 
                 <TextView
                     style="@style/textViewInformationCardView"
-                    android:layout_marginLeft="@dimen/marginleft_text_specifications"
+                    android:layout_marginLeft="@dimen/marginleft_text"
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -6,12 +6,101 @@
     android:orientation="vertical"
     tools:context="co.devhack.presentation.view.dialog.ContactsDialog">
 
-
-    <TextView
+    <LinearLayout
+        android:layout_marginTop="@dimen/margintop_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/admira_ini"
+            android:textColor="@color/colorPrimary"/>
+        <TextView
+            style="@style/textViewContacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/admira_fin"
+            android:textColor="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/margintop_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:gravity="center"
-        android:text="@string/contact_us"/>
+        android:layout_marginLeft="@dimen/marginLeft_layout_contacts">
+
+        <ImageView
+            android:layout_width="@dimen/size_icon"
+            android:layout_height="@dimen/size_icon"
+            android:background="@drawable/icon_phone"
+            />
+
+        <TextView
+            style="@style/textViewContacts"
+            android:layout_marginLeft="@dimen/marginleft_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cell_phone_number" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/margintop_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/marginLeft_layout_contacts">
+
+        <ImageView
+            android:layout_width="@dimen/size_icon"
+            android:layout_height="@dimen/size_icon"
+            android:background="@drawable/icon_email"
+            />
+
+        <TextView
+            style="@style/textViewContacts"
+            android:layout_marginLeft="@dimen/marginleft_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/e_mail"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/margintop_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/marginLeft_layout_contacts"
+        android:layout_marginBottom="@dimen/layout_marginbottom_layout">
+
+        <ImageView
+            android:layout_width="@dimen/size_icon"
+            android:layout_height="@dimen/size_icon"
+            android:background="@drawable/icon_maps"
+            />
+
+        <TextView
+            style="@style/textViewContacts"
+            android:layout_marginLeft="@dimen/marginleft_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/location"/>
+
+    </LinearLayout>
 
 
 </LinearLayout>

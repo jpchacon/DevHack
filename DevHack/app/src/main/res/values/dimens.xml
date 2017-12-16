@@ -10,12 +10,16 @@
     <dimen name="height_cardview">100dp</dimen>
     <dimen name="marginleft_image_programs">20dp</dimen>
     <dimen name="marginleft_text_programs">20dp</dimen>
-    <dimen name="marginleft_text_specifications">10dp</dimen>
+    <dimen name="marginleft_text">10dp</dimen>
     <dimen name="text_zise_cardview">18sp</dimen>
     <dimen name="margintop_cardview_work">6dp</dimen>
 
-    <dimen name="margintop_informations_programs">10dp</dimen>
+    <dimen name="margintop_layout">10dp</dimen>
+    <dimen name="layout_marginbottom_layout">10dp</dimen>
     <dimen name="margintop_informations">30dp</dimen>
+
+    <dimen name="size_icon">45dp</dimen>
+    <dimen name="marginLeft_layout_contacts">40dp</dimen>
 
 
 </resources>
