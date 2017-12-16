@@ -37,4 +37,9 @@
         <item name="android:textSize">@dimen/text_zise_cardview</item>
     </style>
 
+    <style name="textViewInformationWork" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorBlackItem</item>
+        <item name="android:textSize">@dimen/text_zise_cardview</item>
+    </style>
+
 </resources>

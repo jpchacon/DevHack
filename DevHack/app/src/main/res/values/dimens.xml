@@ -12,6 +12,7 @@
     <dimen name="marginleft_text_programs">20dp</dimen>
     <dimen name="marginleft_text">10dp</dimen>
     <dimen name="text_zise_cardview">18sp</dimen>
+    <dimen name="text_zise_title">25sp</dimen>
     <dimen name="margintop_cardview_work">6dp</dimen>
 
     <dimen name="margintop_layout">10dp</dimen>
