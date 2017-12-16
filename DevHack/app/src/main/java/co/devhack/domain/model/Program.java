@@ -1,38 +1,35 @@
 package co.devhack.domain.model;
 
-import java.util.Date;
 import java.util.List;
 
 /**
  * Created by Juanpa on 14/12/2017.
  */
 public class Program {
-    private Integer id;
     private String image;
     private String description;
-    private Date startDate;
+    private String startDate;
     private String duration;
     private String schedules;
     private List<String> modules;
     private List<String> themes;
     private String investment;
+    private Integer id;
 
     /**
      * Constructor para crear Programs
      * @param description
      * @param startDate
-     * @param image
      * @param duration
      * @param schedules
      * @param modules
      * @param themes
      * @param investment
-
+     * @param image
      */
-    public Program(String image, String description, Date startDate, String duration,
+    public Program(String description, String startDate, String duration,
                     String schedules, List<String> modules, List<String> themes,
-                    String investment) {
-        this.image = image;
+                    String investment,String image) {
         this.description = description;
         this.startDate = startDate;
         this.duration = duration;
@@ -40,8 +37,7 @@ public class Program {
         this.modules = modules;
         this.themes = themes;
         this.investment = investment;
-
-
+        this.image = image;
     }
 
     public Integer getId() {
@@ -68,11 +64,11 @@ public class Program {
         this.description = description;
     }
 
-    public Date getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 

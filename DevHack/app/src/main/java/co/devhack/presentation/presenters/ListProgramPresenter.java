@@ -38,8 +38,7 @@ public class ListProgramPresenter implements ListProgramContract.UserActionsList
 
             @Override
             public void error(Exception error) {
-                //TODO MOSTRAR ERROR
-                //view.showErrorMessage(error);
+                view.showErrorMessage(error);
             }
         });
     }

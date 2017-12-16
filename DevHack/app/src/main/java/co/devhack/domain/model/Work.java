@@ -1,7 +1,5 @@
 package co.devhack.domain.model;
 
-import java.util.Date;
-
 /**
  * Created by Juanpa on 14/12/2017.
  */
@@ -12,12 +10,12 @@ public class Work {
     private String empresa;
     private String cargo;
     private String tipo;
-    private Date fecha;
+    private String fecha;
     private String descripcion;
     private String email;
     private String celular;
 
-    public Work(String empresa, String cargo, String tipo, Date fecha, String descripcion, String email, String celular) {
+    public Work(String empresa, String cargo, String tipo, String fecha, String descripcion, String email, String celular) {
         this.empresa = empresa;
         this.cargo = cargo;
         this.tipo = tipo;
@@ -59,11 +57,11 @@ public class Work {
         this.tipo = tipo;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 

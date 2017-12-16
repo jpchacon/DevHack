@@ -14,6 +14,7 @@ public interface ListProgramContract {
 
         void refreshPrograms();
 
+        void showErrorMessage(Exception error);
     }
 
     interface UserActionsListener {
