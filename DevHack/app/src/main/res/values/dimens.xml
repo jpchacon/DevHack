@@ -6,7 +6,7 @@
     <dimen name="nav_header_height">160dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 
-    <dimen name="cornerradius_cardview">4dp</dimen>
+    <dimen name="cornerradius_cardview">5dp</dimen>
     <dimen name="height_cardview">100dp</dimen>
     <dimen name="marginleft_image_programs">20dp</dimen>
     <dimen name="marginleft_text_programs">20dp</dimen>
