@@ -9,8 +9,6 @@
     android:layout_marginRight="@dimen/activity_horizontal_margin"
     tools:context="co.devhack.presentation.view.fragments.ProgramsInformation">
 
-
-
     <ImageView
         android:id="@+id/ivLogoProgram"
         android:layout_width="match_parent"
@@ -18,13 +16,33 @@
         android:src="@mipmap/ic_launcher"
         android:layout_marginTop="@dimen/margintop_layout"/>
 
-    <TextView
-        android:id="@+id/tvProgram"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Programa"
-        android:layout_marginTop="@dimen/margintop_layout"/>
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margintop_layout">
+
+
+        <TextView
+            style="@style/textViewInformationWork"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Programa:"
+            android:layout_marginLeft="20dp"/>
+
+
+        <TextView
+            style="@style/textViewInformationWork"
+            android:id="@+id/tvProgram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frontend Angular"
+            android:layout_marginLeft="@dimen/marginleft_text"/>
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,12 +51,15 @@
         android:layout_marginTop="@dimen/margintop_informations">
 
         <TextView
+            style="@style/textViewInformationWork"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Inicia:"
             android:layout_marginLeft="20dp"/>
 
         <TextView
+            style="@style/textViewInformationWork"
             android:id="@+id/tvStartDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -53,12 +74,15 @@
         android:orientation="horizontal">
 
         <TextView
+            style="@style/textViewInformationWork"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Duración:"
             android:layout_marginLeft="20dp"/>
 
         <TextView
+            style="@style/textViewInformationWork"
             android:id="@+id/tvDuration"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -73,12 +97,15 @@
         android:orientation="horizontal">
 
         <TextView
+            style="@style/textViewInformationWork"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Horarios:"
             android:layout_marginLeft="20dp"/>
 
         <TextView
+            style="@style/textViewInformationWork"
             android:id="@+id/tvSchedules"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -94,18 +121,22 @@
         android:orientation="horizontal">
 
         <TextView
+            style="@style/textViewInformationWork"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Inversión:"
             android:layout_marginLeft="20dp"/>
 
         <TextView
+            style="@style/textViewInformationWork"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="$"
             android:layout_marginLeft="@dimen/marginleft_text"/>
 
         <TextView
+            style="@style/textViewInformationWork"
             android:id="@+id/tvInvestment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -113,6 +144,7 @@
             android:layout_marginLeft="@dimen/marginleft_text"/>
 
         <TextView
+            style="@style/textViewInformationWork"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pesos"
@@ -121,6 +153,8 @@
     </LinearLayout>
 
     <TextView
+        style="@style/textViewInformationWork"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
