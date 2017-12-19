@@ -6,63 +6,44 @@ package co.devhack.domain.model;
 
 public class Work {
 
-    private Integer id;
-    private String empresa;
-    private String cargo;
-    private String tipo;
-    private String fecha;
+    private String id;
+    private String ciudad;
     private String descripcion;
     private String email;
-    private String celular;
+    private String empresa;
+    private String fecha;
+    private String keywords;
+    private String modalidad;
+    private String telefono;
+    private String titulo;
 
-    public Work(String empresa, String cargo, String tipo, String fecha, String descripcion, String email, String celular) {
-        this.empresa = empresa;
-        this.cargo = cargo;
-        this.tipo = tipo;
-        this.fecha = fecha;
+
+    public Work(String ciudad, String descripcion, String email, String empresa, String fecha, String keywords, String modalidad, String telefono, String titulo) {
+        this.ciudad = ciudad;
         this.descripcion = descripcion;
         this.email = email;
-        this.celular = celular;
+        this.empresa = empresa;
+        this.fecha = fecha;
+        this.keywords = keywords;
+        this.modalidad = modalidad;
+        this.telefono = telefono;
+        this.titulo = titulo;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getEmpresa() {
-        return empresa;
+    public String getCiudad() {
+        return ciudad;
     }
 
-    public void setEmpresa(String empresa) {
-        this.empresa = empresa;
-    }
-
-    public String getCargo() {
-        return cargo;
-    }
-
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
-    public String getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
     }
 
     public String getDescripcion() {
@@ -81,11 +62,51 @@ public class Work {
         this.email = email;
     }
 
-    public String getCelular() {
-        return celular;
+    public String getEmpresa() {
+        return empresa;
     }
 
-    public void setCelular(String celular) {
-        this.celular = celular;
+    public void setEmpresa(String empresa) {
+        this.empresa = empresa;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getKeywords() {
+        return keywords;
+    }
+
+    public void setKeywords(String keywords) {
+        this.keywords = keywords;
+    }
+
+    public String getModalidad() {
+        return modalidad;
+    }
+
+    public void setModalidad(String modalidad) {
+        this.modalidad = modalidad;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 }
