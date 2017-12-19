@@ -1,155 +1,53 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="co.devhack.presentation.view.fragments.WorkInformation">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                style="@style/textViewInformationWork"
-                android:textSize="@dimen/text_zise_title"
-                android:textStyle="bold"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Work_offers"
-                android:layout_marginTop="@dimen/margintop_layout"
-                android:gravity="center"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="@dimen/margintop_informations">
-
-                <TextView
-                    style="@style/textViewInformationWork"
-                    android:textStyle="bold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Empresa:"
-                    android:layout_marginLeft="20dp"/>
-
-                <TextView
-                    style="@style/textViewInformationWork"
-                    android:layout_marginLeft="@dimen/marginleft_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="El lab coworking"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="@dimen/margintop_cardview_work">
-
-                <TextView
-                    style="@style/textViewInformationWork"
-                    android:textStyle="bold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Cargo:"
-                    android:layout_marginLeft="20dp" />
-
-                <TextView
-                    style="@style/textViewInformationWork"
-                    android:layout_marginLeft="@dimen/marginleft_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Desarrollador Android"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="@dimen/margintop_cardview_work">
-
-                <TextView
-                    style="@style/textViewInformationWork"
-                    android:textStyle="bold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tipo"
-                    android:layout_marginLeft="20dp"/>
-
-                <TextView
-                    style="@style/textViewInformationWork"
-                    android:textStyle="bold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/marginleft_text"
-                    android:text="@string/separacion" />
-
-                <TextView
-                    style="@style/textViewInformationWork"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/marginleft_text"
-                    android:text="Fecha" />
-
-            </LinearLayout>
-
-            <TextView
-                style="@style/textViewInformationWork"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Descripción"
-                android:inputType="textMultiLine"
-                android:textStyle="italic"
-                android:layout_marginTop="@dimen/margintop_layout"
-                android:layout_marginBottom="@dimen/margintop_layout"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"/>
-
-            <Button
-                style="@style/textViewCardView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_marginTop="@dimen/margintop_layout"
-                android:text="Ver datos de contacto"
-                android:textStyle="bold"
-                android:background="@color/colorPrimaryDark"/>
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <!--Este es el linear que hay que ocultar-->
+
+                <TextView
+                    style="@style/textViewInformationWork"
+                    android:textSize="@dimen/text_zise_title"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Work_offers"
+                    android:layout_marginTop="@dimen/margintop_layout"
+                    android:gravity="center"/>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="@dimen/margintop_cardview_work">
+                    android:layout_marginTop="@dimen/margintop_informations">
 
                     <TextView
                         style="@style/textViewInformationWork"
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Email"
-                        android:layout_marginLeft="20dp"/>
+                        android:text="@string/company"
+                        android:layout_marginLeft="@dimen/marginleft_text_programs"/>
 
                     <TextView
                         style="@style/textViewInformationWork"
                         android:layout_marginLeft="@dimen/marginleft_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:text="Juan.gomez01@gmail.com"/>
+                        android:text="El lab coworking"/>
 
                 </LinearLayout>
 
@@ -164,22 +62,131 @@
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Celular:"
-                        android:layout_marginLeft="20dp" />
+                        android:text="@string/task"
+                        android:layout_marginLeft="@dimen/marginleft_text_programs" />
 
                     <TextView
                         style="@style/textViewInformationWork"
                         android:layout_marginLeft="@dimen/marginleft_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="317 444 655"/>
+                        android:text="Desarrollador Android"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margintop_cardview_work">
+
+                    <TextView
+                        style="@style/textViewInformationWork"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tipo"
+                        android:layout_marginLeft="@dimen/marginleft_text_programs"/>
+
+                    <TextView
+                        style="@style/textViewInformationWork"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/marginleft_text"
+                        android:text="@string/separacion" />
+
+                    <TextView
+                        style="@style/textViewInformationWork"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/marginleft_text"
+                        android:text="Fecha" />
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/textViewInformationWork"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Descripción"
+                    android:inputType="textMultiLine"
+                    android:textStyle="italic"
+                    android:layout_marginTop="@dimen/margintop_layout"
+                    android:layout_marginBottom="@dimen/margintop_layout"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+
+                <Button
+                    android:theme="@style/RaisedButtonDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/margintop_layout"
+                    android:text="@string/view_contact_data"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/margintop_layout">
+                    <!--Este es el linear que hay que ocultar-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/margintop_cardview_work">
+
+                        <TextView
+                            style="@style/textViewInformationWork"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/email"
+                            android:layout_marginLeft="@dimen/marginleft_text_programs"/>
+
+                        <TextView
+                            style="@style/textViewInformationWork"
+                            android:layout_marginLeft="@dimen/marginleft_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:text="Juan.gomez01@gmail.com"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/margintop_cardview_work">
+
+                        <TextView
+                            style="@style/textViewInformationWork"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cell_phone"
+                            android:layout_marginLeft="@dimen/marginleft_text_programs" />
+
+                        <TextView
+                            style="@style/textViewInformationWork"
+                            android:layout_marginLeft="@dimen/marginleft_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="317 444 655"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
             </LinearLayout>
 
-        </LinearLayout>
+        </ScrollView>
 
-    </ScrollView>
+    </LinearLayout>
 
-</LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

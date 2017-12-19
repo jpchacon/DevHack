@@ -19,5 +19,18 @@
     <string name="e_mail">hola@devhack.co</string>
     <string name="location">Cali, Colombia</string>
     <string name="separacion">-</string>
+    <string name="sign_up">Registrate</string>
+    <string name="what_is_your_name">Cuál es tu nombre?</string>
+    <string name="email_read_user">El correo en el que nos leerás?</string>
+    <string name="user_contact_number">Número al que nos podamos contactar?</string>
+    <string name="send">Enviar</string>
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="enter">Ingresar</string>
+    <string name="company">Empresa:</string>
+    <string name="task">Cargo:</string>
+    <string name="view_contact_data">Ver datos de contacto</string>
+    <string name="email">Email</string>
+    <string name="cell_phone">Celular:</string>
 
 </resources>
