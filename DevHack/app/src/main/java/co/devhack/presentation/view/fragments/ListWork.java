@@ -1,6 +1,7 @@
 package co.devhack.presentation.view.fragments;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 
 import co.devhack.R;
 import co.devhack.presentation.interfaces.ListWorkContract;
+import co.devhack.presentation.interfaces.ReplaceFragmentWork;
 import co.devhack.presentation.presenters.ListWorkPresenter;
 import co.devhack.presentation.view.adapters.WorkAdapter;
 
@@ -24,6 +26,8 @@ public class ListWork extends Fragment implements ListWorkContract.View{
 
     private RecyclerView recyclerView;
 
+    private ReplaceFragmentWork mListenerCallback;
+
 
     public ListWork() {
     }
@@ -32,6 +36,16 @@ public class ListWork extends Fragment implements ListWorkContract.View{
         return new ListWork();
     }
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if(context instanceof ReplaceFragmentWork){
+            mListenerCallback = (ReplaceFragmentWork) context;
+        }
+        else {
+            throw new RuntimeException("Debe implementar la interface");
+        }
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -46,13 +60,22 @@ public class ListWork extends Fragment implements ListWorkContract.View{
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
 
-        WorkAdapter workAdapter = new WorkAdapter(mActionsListener.getLstWorks());
+        WorkAdapter workAdapter = new WorkAdapter(mActionsListener.getLstWorks(),
+                new WorkAdapter.ListenerClickView() {
+
+                    @Override
+                    public void click(String id) {
+                        mListenerCallback.replaceFragmentMainActivity(id);
+                    }
+                });
         recyclerView.setAdapter(workAdapter);
 
         mActionsListener.loadAll();
 
         return view;
     }
+
+
 
     @Override
     public void refreshTodos() {

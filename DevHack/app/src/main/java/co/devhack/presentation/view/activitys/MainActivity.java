@@ -15,12 +15,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import co.devhack.R;
+import co.devhack.presentation.interfaces.ReplaceFragmentWork;
 import co.devhack.presentation.view.dialog.ContactsDialog;
 import co.devhack.presentation.view.fragments.ListPrograms;
 import co.devhack.presentation.view.fragments.ListWork;
+import co.devhack.presentation.view.fragments.WorkInformation;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, ReplaceFragmentWork {
 
     private NavigationView navigationView;
 
@@ -111,5 +113,11 @@ public class MainActivity extends AppCompatActivity
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.container, fragment);
         fragmentTransaction.commit();
+    }
+
+
+    @Override
+    public void replaceFragmentMainActivity(String id) {
+        replaceFragment(WorkInformation.getInstance(id));
     }
 }

@@ -58,8 +58,5 @@ public class ListPrograms extends Fragment implements ListProgramContract.View{
         rvListProgram.getAdapter().notifyDataSetChanged();
     }
 
-    @Override
-    public void showErrorMessage(Exception error) {
-        String erro = error.getMessage();
-    }
+
 }

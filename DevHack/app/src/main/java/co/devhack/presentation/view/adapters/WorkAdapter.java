@@ -15,17 +15,24 @@ import co.devhack.domain.model.Work;
  * Created by Juanpa on 14/12/2017.
  */
 
-public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.WorkViewHolder> {
+public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.WorkViewHolder> implements View.OnClickListener{
 
     List<Work> dataSet;
+    private ListenerClickView listenerClickView;
 
-    public WorkAdapter(List<Work> dataSet){
+    public interface ListenerClickView{
+        void click(String id);
+    }
+
+    public WorkAdapter(List<Work> dataSet, ListenerClickView listenerClickView){
         this.dataSet = dataSet;
+        this.listenerClickView = listenerClickView;
     }
 
     @Override
     public WorkViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_work,parent,false);
+        view.setOnClickListener(this);
         return new WorkViewHolder(view);
     }
 
@@ -34,14 +41,22 @@ public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.WorkViewHolder
         Work work = dataSet.get(position);
 
         holder.tvEmpresaCard.setText(work.getEmpresa());
-        holder.tvCargoCard.setText(work.getCargo());
-        holder.tvTipoCard.setText(work.getTipo());
-        holder.tvFechaCard.setText((CharSequence) work.getFecha());
+        holder.tvCargoCard.setText(work.getTitulo());
+        holder.tvTipoCard.setText(work.getModalidad()+", "+work.getCiudad());
+        holder.tvFechaCard.setText(work.getFecha());
     }
 
     @Override
     public int getItemCount() {
         return dataSet.size();
+    }
+
+    @Override
+    public void onClick(View view) {
+        if(listenerClickView !=null){
+
+            listenerClickView.click("");
+        }
     }
 
     public class WorkViewHolder extends RecyclerView.ViewHolder {
