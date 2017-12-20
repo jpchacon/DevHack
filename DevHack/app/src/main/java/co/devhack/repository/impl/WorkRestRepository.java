@@ -1,5 +1,6 @@
 package co.devhack.repository.impl;
 
+import java.util.HashMap;
 import java.util.List;
 
 import co.devhack.domain.model.Work;
@@ -21,17 +22,17 @@ public class WorkRestRepository implements WorkRepository {
 
     public interface WorkService{
         @GET("works.json")
-        Call<List<Work>> getAll();
+        Call<HashMap<String, Work>> getAll();
     }
 
 
     @Override
-    public List<Work> getAll() throws Exception {
+    public HashMap<String, Work> getAll() throws Exception {
         Retrofit retrofit = RetrofitSingleton.getInstance();
         WorkService workService = retrofit.create(WorkService.class);
-        Call<List<Work>> call = workService.getAll();
+        Call<HashMap<String, Work>> call = workService.getAll();
 
-        Response<List<Work>> response = call.execute();
+        Response<HashMap<String, Work>> response = call.execute();
 
         return response.body();
     }

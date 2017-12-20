@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import co.devhack.R;
+import co.devhack.domain.model.Work;
 import co.devhack.presentation.interfaces.ReplaceFragmentWork;
 import co.devhack.presentation.view.dialog.ContactsDialog;
 import co.devhack.presentation.view.fragments.ListPrograms;
@@ -117,7 +118,7 @@ public class MainActivity extends AppCompatActivity
 
 
     @Override
-    public void replaceFragmentMainActivity(String id) {
-        replaceFragment(WorkInformation.getInstance(id));
+    public void replaceFragmentMainActivity(Work work) {
+        replaceFragment(WorkInformation.getInstance(work));
     }
 }

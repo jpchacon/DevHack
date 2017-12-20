@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import co.devhack.R;
+import co.devhack.domain.model.Work;
 import co.devhack.presentation.interfaces.ListWorkContract;
 import co.devhack.presentation.interfaces.ReplaceFragmentWork;
 import co.devhack.presentation.presenters.ListWorkPresenter;
@@ -64,8 +65,8 @@ public class ListWork extends Fragment implements ListWorkContract.View{
                 new WorkAdapter.ListenerClickView() {
 
                     @Override
-                    public void click(String id) {
-                        mListenerCallback.replaceFragmentMainActivity(id);
+                    public void click(Work work) {
+                        mListenerCallback.replaceFragmentMainActivity(work);
                     }
                 });
         recyclerView.setAdapter(workAdapter);
@@ -84,7 +85,6 @@ public class ListWork extends Fragment implements ListWorkContract.View{
 
     @Override
     public void errorMenssagge(Exception e) {
-        //Todo revisar esto
-        Snackbar.make(getView(),e.getMessage(),Snackbar.LENGTH_LONG).show();
+
     }
 }

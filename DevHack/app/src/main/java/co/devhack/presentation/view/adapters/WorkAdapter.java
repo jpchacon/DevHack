@@ -15,13 +15,13 @@ import co.devhack.domain.model.Work;
  * Created by Juanpa on 14/12/2017.
  */
 
-public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.WorkViewHolder> implements View.OnClickListener{
+public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.WorkViewHolder>{
 
     List<Work> dataSet;
     private ListenerClickView listenerClickView;
 
     public interface ListenerClickView{
-        void click(String id);
+        void click(Work work);
     }
 
     public WorkAdapter(List<Work> dataSet, ListenerClickView listenerClickView){
@@ -32,7 +32,6 @@ public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.WorkViewHolder
     @Override
     public WorkViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_work,parent,false);
-        view.setOnClickListener(this);
         return new WorkViewHolder(view);
     }
 
@@ -51,13 +50,6 @@ public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.WorkViewHolder
         return dataSet.size();
     }
 
-    @Override
-    public void onClick(View view) {
-        if(listenerClickView !=null){
-
-            listenerClickView.click("");
-        }
-    }
 
     public class WorkViewHolder extends RecyclerView.ViewHolder {
 
@@ -73,6 +65,14 @@ public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.WorkViewHolder
             tvCargoCard = itemView.findViewById(R.id.tvCargoCard);
             tvTipoCard = itemView.findViewById(R.id.tvTipoCard);
             tvFechaCard = itemView.findViewById(R.id.tvFechaCard);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Work work = dataSet.get(getAdapterPosition());
+                    listenerClickView.click(work);
+                }
+            });
         }
     }
 }

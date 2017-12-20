@@ -1,5 +1,8 @@
 package co.devhack.domain.usecase.impl;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 import co.devhack.domain.model.Work;
@@ -25,7 +28,24 @@ public class WorkUseCaseImpl implements WorkUseCase {
         new ThreadExecutor<List<Work>>(new ThreadExecutor.Task<List<Work>>() {
             @Override
             public List<Work> execute() throws Exception {
-                return workRestRepository.getAll();
+                HashMap<String, Work> hashMap = workRestRepository.getAll();
+                List<Work> lstWork = new ArrayList<>(0);
+                if(hashMap != null && hashMap.size() > 0){
+                    Iterator<String> iterator = hashMap.keySet().iterator();
+                    String key;
+                    Work work;
+                    while(iterator.hasNext()){
+                        key = iterator.next();
+
+                        work = hashMap.get(key);
+
+                        work.setId(key);
+
+                        lstWork.add(work);
+                    }
+                }
+
+                return lstWork;
             }
 
             @Override

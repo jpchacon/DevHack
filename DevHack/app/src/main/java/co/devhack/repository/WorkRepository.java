@@ -1,5 +1,6 @@
 package co.devhack.repository;
 
+import java.util.HashMap;
 import java.util.List;
 
 import co.devhack.domain.model.Work;
@@ -9,5 +10,5 @@ import co.devhack.domain.model.Work;
  */
 
 public interface WorkRepository {
-    List<Work> getAll() throws Exception;
+    HashMap<String, Work> getAll() throws Exception;
 }
