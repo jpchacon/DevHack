@@ -83,21 +83,66 @@
                     android:layout_marginTop="@dimen/margintop_cardview_work">
 
                     <TextView
-                        android:id="@+id/tvModalidadWork"
                         style="@style/textViewInformationWork"
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Tipo"
+                        android:text="@string/modality"
                         android:layout_marginLeft="@dimen/marginleft_text_programs"/>
+
+
+
+                    <TextView
+                        android:id="@+id/tvModalidadWork"
+                        style="@style/textViewInformationWork"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/marginleft_text"
+                        android:text="Tipo" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margintop_cardview_work">
 
                     <TextView
                         style="@style/textViewInformationWork"
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/city"
+                        android:layout_marginLeft="@dimen/marginleft_text_programs"/>
+
+
+
+                    <TextView
+                        android:id="@+id/tvCiudadWork"
+                        style="@style/textViewInformationWork"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/marginleft_text"
-                        android:text="@string/separacion" />
+                        android:text="cali" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margintop_cardview_work">
+
+                    <TextView
+                        style="@style/textViewInformationWork"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/date"
+                        android:layout_marginLeft="@dimen/marginleft_text_programs"/>
+
+
 
                     <TextView
                         android:id="@+id/tvFechaWork"
@@ -105,7 +150,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/marginleft_text"
-                        android:text="Fecha" />
+                        android:text="01-01-2018" />
 
                 </LinearLayout>
 
@@ -115,7 +160,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Descripción"
-                    android:inputType="textMultiLine"
                     android:textStyle="italic"
                     android:layout_marginTop="@dimen/margintop_layout"
                     android:layout_marginBottom="@dimen/margintop_layout"

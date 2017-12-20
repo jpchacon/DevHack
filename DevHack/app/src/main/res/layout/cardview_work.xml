@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/height_cardview"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@color/colorBlackItem">
 
@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Empresa:"
-                android:layout_marginLeft="20dp"/>
+                android:layout_marginLeft="@dimen/marginleft_text_programs"/>
 
             <TextView
                 android:id="@+id/tvEmpresaCard"
@@ -32,7 +32,6 @@
                 android:layout_marginLeft="@dimen/marginleft_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/marginleft_text"
                 android:text="El lab coworking"/>
 
         </LinearLayout>
@@ -48,14 +47,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cargo:"
-                android:layout_marginLeft="20dp" />
+                android:layout_marginLeft="@dimen/marginleft_text_programs" />
 
             <TextView
                 android:id="@+id/tvCargoCard"
                 style="@style/textViewInformationCardView"
                 android:layout_marginLeft="@dimen/marginleft_text"
-                android:layout_marginRight="@dimen/marginleft_text"
-                android:inputType="textMultiLine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Desarrollador Android"/>
@@ -69,22 +66,36 @@
             android:layout_marginTop="@dimen/margintop_cardview_work">
 
             <TextView
-                android:id="@+id/tvTipoCard"
                 style="@style/textViewCardView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textMultiLine"
-                android:text="Tipo"
-                android:layout_marginLeft="20dp"/>
+                android:text="@string/city"
+                android:layout_marginLeft="@dimen/marginleft_text_programs"/>
+
 
             <TextView
+                android:id="@+id/tvCityCard"
                 style="@style/textViewInformationCardView"
-                android:textColor="@color/colorPrimaryDark"
-                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/marginleft_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/marginleft_text"
-                android:text="@string/separacion" />
+                android:text="Cali" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margintop_cardview_work"
+            android:layout_marginBottom="@dimen/margintop_cardview_work">
+
+            <TextView
+                style="@style/textViewCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date"
+                android:layout_marginLeft="@dimen/marginleft_text_programs"/>
 
             <TextView
                 android:id="@+id/tvFechaCard"
@@ -92,9 +103,7 @@
                 android:layout_marginLeft="@dimen/marginleft_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/marginleft_text"
-                android:inputType="textMultiLine"
-                android:text="Fecha" />
+                android:text="01-01-2018" />
 
         </LinearLayout>
 

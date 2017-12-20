@@ -20,6 +20,7 @@ public class WorkInformation extends Fragment {
     private String empresa;
     private String cargo;
     private String modalidad;
+    private String ciudad;
     private String fecha;
     private String descripcion;
     private String email;
@@ -28,6 +29,7 @@ public class WorkInformation extends Fragment {
     private static final String EMPRESA = "empresa";
     private static final String CARGO = "cargo";
     private static final String MODALIDAD = "tipo";
+    private static final String CIUDAD = "ciudad";
     private static final String FECHA = "fecha";
     private static final String DESCRIPCION = "descripcion";
     private static final String EMAIL = "email";
@@ -36,6 +38,7 @@ public class WorkInformation extends Fragment {
     private TextView tvEmpresaWork;
     private TextView tvCargoWork;
     private TextView tvModalidadWork;
+    private TextView tvCiudadWork;
     private TextView tvFechaWork;
     private TextView tvDescripcionWork;
     private TextView tvEmailWork;
@@ -49,7 +52,8 @@ public class WorkInformation extends Fragment {
         Bundle args = new Bundle();
         args.putString(EMPRESA, work.getEmpresa());
         args.putString(CARGO, work.getTitulo());
-        args.putString(MODALIDAD, work.getCiudad());
+        args.putString(MODALIDAD, work.getModalidad());
+        args.putString(CIUDAD, work.getCiudad());
         args.putString(FECHA, work.getFecha());
         args.putString(DESCRIPCION, work.getDescripcion());
         args.putString(EMAIL, work.getEmail());
@@ -65,6 +69,7 @@ public class WorkInformation extends Fragment {
             empresa = getArguments().getString(EMPRESA);
             cargo = getArguments().getString(CARGO);
             modalidad = getArguments().getString(MODALIDAD);
+            ciudad = getArguments().getString(CIUDAD);
             fecha = getArguments().getString(FECHA);
             descripcion = getArguments().getString(DESCRIPCION);
             email = getArguments().getString(EMAIL);
@@ -80,6 +85,7 @@ public class WorkInformation extends Fragment {
         tvEmpresaWork = view.findViewById(R.id.tvEmpresaWork);
         tvCargoWork = view.findViewById(R.id.tvCargoWork);
         tvModalidadWork = view.findViewById(R.id.tvModalidadWork);
+        tvCiudadWork = view.findViewById(R.id.tvCiudadWork);
         tvFechaWork = view.findViewById(R.id.tvFechaWork);
         tvDescripcionWork = view.findViewById(R.id.tvDescripcionWork);
         tvEmailWork = view.findViewById(R.id.tvEmailWork);
@@ -89,6 +95,7 @@ public class WorkInformation extends Fragment {
         tvEmpresaWork.setText(empresa);
         tvCargoWork.setText(cargo);
         tvModalidadWork.setText(modalidad);
+        tvCiudadWork.setText(ciudad);
         tvFechaWork.setText(fecha);
         tvDescripcionWork.setText(descripcion);
         tvEmailWork.setText(email);

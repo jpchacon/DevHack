@@ -41,7 +41,7 @@ public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.WorkViewHolder
 
         holder.tvEmpresaCard.setText(work.getEmpresa());
         holder.tvCargoCard.setText(work.getTitulo());
-        holder.tvTipoCard.setText(work.getModalidad()+", "+work.getCiudad());
+        holder.tvCityCard.setText(work.getCiudad());
         holder.tvFechaCard.setText(work.getFecha());
     }
 
@@ -55,7 +55,7 @@ public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.WorkViewHolder
 
         private TextView tvEmpresaCard;
         private TextView tvCargoCard;
-        private TextView tvTipoCard;
+        private TextView tvCityCard;
         private TextView tvFechaCard;
 
         public WorkViewHolder(View itemView) {
@@ -63,7 +63,7 @@ public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.WorkViewHolder
 
             tvEmpresaCard = itemView.findViewById(R.id.tvEmpresaCard);
             tvCargoCard = itemView.findViewById(R.id.tvCargoCard);
-            tvTipoCard = itemView.findViewById(R.id.tvTipoCard);
+            tvCityCard = itemView.findViewById(R.id.tvCityCard);
             tvFechaCard = itemView.findViewById(R.id.tvFechaCard);
 
             itemView.setOnClickListener(new View.OnClickListener() {

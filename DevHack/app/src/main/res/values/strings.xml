@@ -18,7 +18,6 @@
     <string name="cell_phone_number">316 871 1557</string>
     <string name="e_mail">hola@devhack.co</string>
     <string name="location">Cali, Colombia</string>
-    <string name="separacion">-</string>
     <string name="sign_up">Registrate</string>
     <string name="what_is_your_name">Cuál es tu nombre?</string>
     <string name="email_read_user">El correo en el que nos leerás?</string>
@@ -32,5 +31,8 @@
     <string name="view_contact_data">Ver datos de contacto</string>
     <string name="email">Email</string>
     <string name="cell_phone">Celular:</string>
+    <string name="modality">Modalidad:</string>
+    <string name="date">Fecha:</string>
+    <string name="city">Ciudad:</string>
 
 </resources>
