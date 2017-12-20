@@ -1,6 +1,6 @@
 package co.devhack.repository;
 
-import java.util.List;
+import java.util.HashMap;
 
 import co.devhack.domain.model.Program;
 
@@ -10,5 +10,5 @@ import co.devhack.domain.model.Program;
 
 public interface ProgramRepository {
 
-    List<Program> getAll() throws Exception;
+    HashMap<String, Program> getAll() throws Exception;
 }

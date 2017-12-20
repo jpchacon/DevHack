@@ -1,50 +1,41 @@
 package co.devhack.domain.model;
 
-import java.util.List;
-
 /**
  * Created by Juanpa on 14/12/2017.
  */
 public class Program {
     private String image;
-    private String description;
+    private String name;
     private String startDate;
     private String duration;
     private String schedules;
-    private List<String> modules;
-    private List<String> themes;
     private String investment;
-    private Integer id;
+    private String id;
 
     /**
      * Constructor para crear Programs
-     * @param description
+     * @param name
      * @param startDate
      * @param duration
      * @param schedules
-     * @param modules
-     * @param themes
      * @param investment
      * @param image
      */
-    public Program(String description, String startDate, String duration,
-                    String schedules, List<String> modules, List<String> themes,
-                    String investment,String image) {
-        this.description = description;
+    public Program(String name, String startDate, String duration,
+                    String schedules, String investment,String image) {
+        this.name = name;
         this.startDate = startDate;
         this.duration = duration;
         this.schedules = schedules;
-        this.modules = modules;
-        this.themes = themes;
         this.investment = investment;
         this.image = image;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -56,12 +47,12 @@ public class Program {
         this.image = image;
     }
 
-    public String getDescription() {
-        return description;
+    public String getName() {
+        return name;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getStartDate() {
@@ -86,22 +77,6 @@ public class Program {
 
     public void setSchedules(String schedules) {
         this.schedules = schedules;
-    }
-
-    public List<String> getModules() {
-        return modules;
-    }
-
-    public void setModules(List<String> modules) {
-        this.modules = modules;
-    }
-
-    public List<String> getThemes() {
-        return themes;
-    }
-
-    public void setThemes(List<String> themes) {
-        this.themes = themes;
     }
 
     public String getInvestment() {

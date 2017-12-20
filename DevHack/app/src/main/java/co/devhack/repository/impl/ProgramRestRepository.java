@@ -1,6 +1,6 @@
 package co.devhack.repository.impl;
 
-import java.util.List;
+import java.util.HashMap;
 
 import co.devhack.domain.model.Program;
 import co.devhack.helpers.RetrofitSingleton;
@@ -19,16 +19,16 @@ public class ProgramRestRepository  implements ProgramRepository {
     public interface ProgramService {
 
         @GET("programs.json")
-        Call<List<Program>> getAll();
+        Call<HashMap<String, Program>> getAll();
     }
 
     @Override
-    public List<Program> getAll() throws Exception {
+    public HashMap<String, Program> getAll() throws Exception {
         Retrofit retrofit = RetrofitSingleton.getInstance();
         ProgramService programService = retrofit.create(ProgramService.class);
-        Call<List<Program>> call = programService.getAll();
+        Call<HashMap<String, Program>> call = programService.getAll();
 
-        Response<List<Program>> response = call.execute();
+        Response<HashMap<String, Program>> response = call.execute();
 
         return response.body();
     }

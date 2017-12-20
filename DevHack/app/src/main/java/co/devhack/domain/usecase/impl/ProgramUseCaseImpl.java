@@ -1,5 +1,8 @@
 package co.devhack.domain.usecase.impl;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 import co.devhack.domain.model.Program;
@@ -26,7 +29,24 @@ public class ProgramUseCaseImpl implements ProgramUseCase {
         new ThreadExecutor<List<Program>>(new ThreadExecutor.Task<List<Program>>() {
             @Override
             public List<Program> execute() throws Exception {
-                return programRepository.getAll();
+                HashMap<String, Program> hashMap = programRepository.getAll();
+                List<Program> lstProgram = new ArrayList<>(0);
+                if(hashMap != null && hashMap.size() > 0){
+                    Iterator <String> iterator = hashMap.keySet().iterator();
+                    String key;
+                    Program program;
+                    while(iterator.hasNext()){
+                        key = iterator.next();
+
+                        program = hashMap.get(key);
+
+                        program.setId(key);
+
+                        lstProgram.add(program);
+                    }
+                }
+
+                return lstProgram;
             }
 
             @Override

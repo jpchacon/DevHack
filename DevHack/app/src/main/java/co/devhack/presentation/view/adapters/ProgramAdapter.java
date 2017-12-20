@@ -39,7 +39,7 @@ public class ProgramAdapter extends RecyclerView.Adapter<ProgramAdapter.Programs
         if(!Utilities.isEmpty(program.getImage())) {
             Glide.with(holder.itemView).load(program.getImage()).into(holder.ivLogoProgram);
         }
-        holder.tvProgram.setText(program.getDescription());
+        holder.tvProgram.setText(program.getName());
         holder.tvStartDate.setText(program.getStartDate().toString());
         holder.tvDuration.setText(program.getDuration());
     }
