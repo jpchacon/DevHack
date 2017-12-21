@@ -43,3 +43,6 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
     testCompile 'junit:junit:4.12'
 }
+
+
+apply plugin: 'com.google.gms.google-services'

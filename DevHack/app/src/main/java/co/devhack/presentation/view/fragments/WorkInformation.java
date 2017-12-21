@@ -7,15 +7,18 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import co.devhack.R;
 import co.devhack.domain.model.Work;
+import co.devhack.presentation.view.dialog.LoginDialog;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class WorkInformation extends Fragment {
+public class WorkInformation extends Fragment implements LoginDialog.OnFinishListener,View.OnClickListener{
 
     private String empresa;
     private String cargo;
@@ -43,6 +46,8 @@ public class WorkInformation extends Fragment {
     private TextView tvDescripcionWork;
     private TextView tvEmailWork;
     private TextView tvTelefonoWork;
+    private Button btnInformationWork;
+    private LinearLayout lyaDatos;
 
     public WorkInformation() {
     }
@@ -90,7 +95,8 @@ public class WorkInformation extends Fragment {
         tvDescripcionWork = view.findViewById(R.id.tvDescripcionWork);
         tvEmailWork = view.findViewById(R.id.tvEmailWork);
         tvTelefonoWork = view.findViewById(R.id.tvTelefonoWork);
-
+        btnInformationWork = view.findViewById(R.id.btnInformationWork);
+        lyaDatos = view.findViewById(R.id.lyaDatos);
 
         tvEmpresaWork.setText(empresa);
         tvCargoWork.setText(cargo);
@@ -100,7 +106,36 @@ public class WorkInformation extends Fragment {
         tvDescripcionWork.setText(descripcion);
         tvEmailWork.setText(email);
         tvTelefonoWork.setText(celular);
+
+        btnInformationWork.setOnClickListener(this);
         return view;
     }
 
+    @Override
+    public void onClick(View view) {
+
+        switch (view.getId()){
+            case R.id.btnInformationWork:
+                goToOnLogin();
+                break;
+        }
+    }
+
+    private void goToOnLogin(){
+        LoginDialog loginDialog = LoginDialog.getInstance(this);
+        loginDialog.show(getFragmentManager(),null);
+    }
+
+    public void loginSucessfull(){
+        btnInformationWork.setVisibility(View.GONE);
+        lyaDatos.setVisibility(View.VISIBLE);
+    }
+
+
+    @Override
+    public void onFinissh(boolean success) {
+        if (success){
+            loginSucessfull();
+        }
+    }
 }

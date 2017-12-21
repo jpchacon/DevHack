@@ -167,6 +167,7 @@
                     android:layout_marginRight="@dimen/activity_horizontal_margin"/>
 
                 <Button
+                    android:id="@+id/btnInformationWork"
                     android:theme="@style/RaisedButtonDark"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -176,10 +177,12 @@
                     android:text="@string/view_contact_data"/>
 
                 <LinearLayout
+                    android:id="@+id/lyaDatos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginTop="@dimen/margintop_layout">
+                    android:layout_marginTop="@dimen/margintop_layout"
+                    android:visibility="gone">
                     <!--Este es el linear que hay que ocultar-->
                     <LinearLayout
                         android:layout_width="match_parent"
