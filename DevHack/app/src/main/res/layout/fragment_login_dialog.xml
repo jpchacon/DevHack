@@ -13,6 +13,13 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <Button
+            android:id="@+id/btnCloseLogin"
+            android:layout_width="@dimen/size_icon_close"
+            android:layout_height="@dimen/size_icon_close"
+            android:layout_gravity="right"
+            android:background="@drawable/icon_close"/>
+
         <TextView
             style="@style/textViewInformationWork"
             android:layout_marginTop="@dimen/margintop_layout"
@@ -23,11 +30,21 @@
             android:textStyle="bold" />
 
         <ImageView
+            android:id="@+id/iconLogin"
             android:layout_marginTop="@dimen/margintop_layout"
             android:layout_width="@dimen/size_icon_login"
             android:layout_height="@dimen/size_icon_login"
             android:src="@drawable/icon_login"
             android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/iconLoginSucessfull"
+            android:layout_marginTop="@dimen/margintop_layout"
+            android:layout_width="@dimen/size_icon_login"
+            android:layout_height="@dimen/size_icon_login"
+            android:src="@drawable/icon_login_sucessfull"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/tilEmailLogin"
@@ -78,7 +95,8 @@
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone"/>
+            android:visibility="gone"
+            android:textSize="@dimen/text_zise_cardview"/>
 
         <Button
             android:id="@+id/btnAcepta"

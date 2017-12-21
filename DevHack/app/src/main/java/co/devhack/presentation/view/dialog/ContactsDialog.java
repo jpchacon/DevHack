@@ -11,15 +11,17 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import co.devhack.R;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ContactsDialog extends DialogFragment {
+public class ContactsDialog extends DialogFragment implements View.OnClickListener{
 
     private View view;
+    private Button btnCloseContacts;
 
 
     public ContactsDialog() {
@@ -33,6 +35,10 @@ public class ContactsDialog extends DialogFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         view = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_contacts_dialog,null);
+
+        btnCloseContacts = view.findViewById(R.id.btnCloseContacts);
+
+        btnCloseContacts.setOnClickListener(this);
     }
 
 
@@ -50,4 +56,12 @@ public class ContactsDialog extends DialogFragment {
         return builder.create();
     }
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.btnCloseContacts:
+                dismiss();
+                break;
+        }
+    }
 }

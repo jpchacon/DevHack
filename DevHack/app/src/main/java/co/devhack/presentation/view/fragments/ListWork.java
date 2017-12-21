@@ -61,7 +61,7 @@ public class ListWork extends Fragment implements ListWorkContract.View{
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
 
-        WorkAdapter workAdapter = new WorkAdapter(mActionsListener.getLstWorks(),
+        WorkAdapter workAdapter = new WorkAdapter(getContext(),mActionsListener.getLstWorks(),
                 new WorkAdapter.ListenerClickView() {
 
                     @Override

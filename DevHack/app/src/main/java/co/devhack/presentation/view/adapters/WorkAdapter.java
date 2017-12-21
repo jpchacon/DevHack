@@ -1,9 +1,13 @@
 package co.devhack.presentation.view.adapters;
 
+import android.content.Context;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import java.util.List;
@@ -19,12 +23,15 @@ public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.WorkViewHolder
 
     List<Work> dataSet;
     private ListenerClickView listenerClickView;
+    private Context context;
+    private static int lastPosition = -1;
 
     public interface ListenerClickView{
         void click(Work work);
     }
 
-    public WorkAdapter(List<Work> dataSet, ListenerClickView listenerClickView){
+    public WorkAdapter(Context context,List<Work> dataSet, ListenerClickView listenerClickView){
+        this.context = context;
         this.dataSet = dataSet;
         this.listenerClickView = listenerClickView;
     }
@@ -43,6 +50,8 @@ public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.WorkViewHolder
         holder.tvCargoCard.setText(work.getTitulo());
         holder.tvCityCard.setText(work.getCiudad());
         holder.tvFechaCard.setText(work.getFecha());
+
+        setAnimation(holder.cardViewWork,position);
     }
 
     @Override
@@ -53,6 +62,7 @@ public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.WorkViewHolder
 
     public class WorkViewHolder extends RecyclerView.ViewHolder {
 
+        private CardView cardViewWork;
         private TextView tvEmpresaCard;
         private TextView tvCargoCard;
         private TextView tvCityCard;
@@ -61,6 +71,7 @@ public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.WorkViewHolder
         public WorkViewHolder(View itemView) {
             super(itemView);
 
+            cardViewWork = itemView.findViewById(R.id.cardViewWork);
             tvEmpresaCard = itemView.findViewById(R.id.tvEmpresaCard);
             tvCargoCard = itemView.findViewById(R.id.tvCargoCard);
             tvCityCard = itemView.findViewById(R.id.tvCityCard);
@@ -74,5 +85,14 @@ public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.WorkViewHolder
                 }
             });
         }
+    }
+    private void setAnimation(View viewToAnimate, int position){
+
+        if (position > lastPosition){
+            Animation animation = AnimationUtils.loadAnimation(context, R.anim.left);
+            viewToAnimate.startAnimation(animation);
+            lastPosition = position;
+        }
+
     }
 }

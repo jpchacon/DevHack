@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -39,7 +40,10 @@ public class LoginDialog extends DialogFragment implements LoginDialogContract.V
     private ProgressBar progressBarLogin;
     private Button btnLogin;
     private Button btnAcepta;
+    private Button btnCloseLogin;
     private TextView msjAlerta;
+    private ImageView imageLogin;
+    private ImageView imageLoginSucessfull;
 
 
     public LoginDialog() {
@@ -68,10 +72,14 @@ public class LoginDialog extends DialogFragment implements LoginDialogContract.V
         progressBarLogin = view.findViewById(R.id.progressBarLogin);
         btnLogin = view.findViewById(R.id.btnLogin);
         btnAcepta = view.findViewById(R.id.btnAcepta);
+        btnCloseLogin = view.findViewById(R.id.btnCloseLogin);
         msjAlerta = view.findViewById(R.id.msjAlerta);
+        imageLogin = view.findViewById(R.id.iconLogin);
+        imageLoginSucessfull = view.findViewById(R.id.iconLoginSucessfull);
 
         btnLogin.setOnClickListener(this);
         btnAcepta.setOnClickListener(this);
+        btnCloseLogin.setOnClickListener(this);
     }
 
     @Override
@@ -82,6 +90,9 @@ public class LoginDialog extends DialogFragment implements LoginDialogContract.V
                 onLogin();
                 break;
             case R.id.btnAcepta:
+                dismiss();
+                break;
+            case R.id.btnCloseLogin:
                 dismiss();
                 break;
         }
@@ -106,7 +117,9 @@ public class LoginDialog extends DialogFragment implements LoginDialogContract.V
         email.setVisibility(View.GONE);
         password.setVisibility(View.GONE);
         btnLogin.setVisibility(View.GONE);
+        imageLogin.setVisibility(View.GONE);
 
+        imageLoginSucessfull.setVisibility(View.VISIBLE);
         msjAlerta.setVisibility(View.VISIBLE);
         msjAlerta.setText(getString(R.string.succesfull_login));
         msjAlerta.setTextColor(getResources().getColor(R.color.success_email));

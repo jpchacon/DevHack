@@ -11,6 +11,13 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <Button
+            android:id="@+id/btnCloseSignUp"
+            android:layout_width="@dimen/size_icon_close"
+            android:layout_height="@dimen/size_icon_close"
+            android:layout_gravity="right"
+            android:background="@drawable/icon_close"/>
+
         <LinearLayout
             android:layout_marginTop="@dimen/margintop_layout"
             android:layout_width="match_parent"

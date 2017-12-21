@@ -45,7 +45,7 @@ public class ListPrograms extends Fragment implements ListProgramContract.View{
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         rvListProgram.setLayoutManager(layoutManager);
 
-        ProgramAdapter programAdapter = new ProgramAdapter(mActionsListener.getLstPrograms());
+        ProgramAdapter programAdapter = new ProgramAdapter(getContext(),mActionsListener.getLstPrograms());
         rvListProgram.setAdapter(programAdapter);
 
         mActionsListener.loadAll();
