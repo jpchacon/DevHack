@@ -19,6 +19,7 @@ public class ListProgramPresenter implements ListProgramContract.UserActionsList
     private ProgramUseCase programUseCase;
     private List<Program> lstPrograms;
 
+
     public ListProgramPresenter(ListProgramContract.View view) {
         this.view = view;
         this.programUseCase = new ProgramUseCaseImpl();

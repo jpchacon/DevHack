@@ -1,7 +1,9 @@
 package co.devhack.repository;
 
 import java.util.HashMap;
+import java.util.List;
 
+import co.devhack.domain.model.Modules;
 import co.devhack.domain.model.Program;
 
 /**
@@ -11,4 +13,6 @@ import co.devhack.domain.model.Program;
 public interface ProgramRepository {
 
     HashMap<String, Program> getAll() throws Exception;
+
+    HashMap<String, List<Modules>> getDetails(String program) throws Exception;
 }

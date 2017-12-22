@@ -15,15 +15,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import co.devhack.R;
+import co.devhack.domain.model.Program;
 import co.devhack.domain.model.Work;
+import co.devhack.presentation.interfaces.ReplaceFragmentProgram;
 import co.devhack.presentation.interfaces.ReplaceFragmentWork;
 import co.devhack.presentation.view.dialog.ContactsDialog;
 import co.devhack.presentation.view.fragments.ListPrograms;
 import co.devhack.presentation.view.fragments.ListWork;
+import co.devhack.presentation.view.fragments.ProgramsInformation;
 import co.devhack.presentation.view.fragments.WorkInformation;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, ReplaceFragmentWork {
+        implements NavigationView.OnNavigationItemSelectedListener, ReplaceFragmentWork, ReplaceFragmentProgram {
 
     private NavigationView navigationView;
 
@@ -43,7 +46,7 @@ public class MainActivity extends AppCompatActivity
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        replaceFragment(ListPrograms.getInstance());
+        replaceFragment(ListPrograms.getInstance(), true);
         selectMenuItem(R.id.nav_programs);
 
     }
@@ -87,9 +90,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_programs) {
-            replaceFragment(ListPrograms.getInstance());
+            replaceFragment(ListPrograms.getInstance(), true);
         } else if (id == R.id.nav_work) {
-            replaceFragment(ListWork.getInstance());
+            replaceFragment(ListWork.getInstance(), true);
         } else if (id == R.id.nav_contacts) {
             ContactsDialog contactsDialog = ContactsDialog.getInstance();
             contactsDialog.show(getSupportFragmentManager(),null);
@@ -109,16 +112,24 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    public void replaceFragment(Fragment fragment) {
+    public void replaceFragment(Fragment fragment, boolean addToBackStack) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.container, fragment);
+        if(addToBackStack) {
+            fragmentTransaction.addToBackStack(null);
+        }
         fragmentTransaction.commit();
     }
 
 
     @Override
     public void replaceFragmentMainActivity(Work work) {
-        replaceFragment(WorkInformation.getInstance(work));
+        replaceFragment(WorkInformation.getInstance(work), true);
+    }
+
+    @Override
+    public void replaceFragmentMainActivity(Program program) {
+        replaceFragment(ProgramsInformation.getInstance(program), true);
     }
 }

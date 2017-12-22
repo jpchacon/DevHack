@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
+import co.devhack.domain.model.Modules;
 import co.devhack.domain.model.Program;
 import co.devhack.domain.usecase.ProgramUseCase;
 import co.devhack.helpers.Callback;
@@ -51,6 +52,35 @@ public class ProgramUseCaseImpl implements ProgramUseCase {
 
             @Override
             public void finish(Exception error, List<Program> result) {
+                if(error != null) {
+                    callback.error(error);
+                } else {
+                    callback.success(result);
+                }
+            }
+        }).execute();
+    }
+
+    @Override
+    public void getDetails(final Callback<List<Modules>> callback, final String program) {
+        new ThreadExecutor<List<Modules>>(new ThreadExecutor.Task<List<Modules>>() {
+            @Override
+            public List<Modules> execute() throws Exception {
+                HashMap<String, List<Modules>> hashMap = programRepository.getDetails(program);
+                List<Modules> lstDetails = new ArrayList<>(0);
+                if(hashMap != null && hashMap.size() > 0){
+                    lstDetails = hashMap.get("modules");
+
+                    if(lstDetails.get(0)==null){
+                        lstDetails.remove(0);
+                    }
+                }
+
+                return lstDetails;
+            }
+
+            @Override
+            public void finish(Exception error, List<Modules> result) {
                 if(error != null) {
                     callback.error(error);
                 } else {

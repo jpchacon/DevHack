@@ -46,4 +46,8 @@ public class Utilities {
 
         return null;
     }
+
+    public static String convertList(String str){
+        return str != null ? str.replaceAll("\\|","\n") : "";
+    }
 }

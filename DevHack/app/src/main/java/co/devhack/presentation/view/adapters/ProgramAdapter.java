@@ -21,9 +21,15 @@ import co.devhack.helpers.Utilities;
 public class ProgramAdapter extends RecyclerView.Adapter<ProgramAdapter.ProgramsViewHolder>{
 
     private List<Program> dataSet;
+    private ProgramAdapter.ListenerClickView listenerClickView;
 
-    public ProgramAdapter(List<Program> dataSet) {
+    public interface ListenerClickView{
+        void click(Program program);
+    }
+
+    public ProgramAdapter(List<Program> dataSet, ProgramAdapter.ListenerClickView listenerClickView) {
         this.dataSet = dataSet;
+        this.listenerClickView = listenerClickView;
     }
 
     @Override
@@ -61,6 +67,14 @@ public class ProgramAdapter extends RecyclerView.Adapter<ProgramAdapter.Programs
             tvProgram = itemView.findViewById(R.id.tvProgram);
             tvStartDate = itemView.findViewById(R.id.tvStartDate);
             tvDuration = itemView.findViewById(R.id.tvDuration);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Program program = dataSet.get(getAdapterPosition());
+                    listenerClickView.click(program);
+                }
+            });
         }
     }
 }
