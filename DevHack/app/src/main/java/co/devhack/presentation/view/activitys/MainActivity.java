@@ -96,9 +96,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_contacts) {
             ContactsDialog contactsDialog = ContactsDialog.getInstance();
             contactsDialog.show(getSupportFragmentManager(),null);
-        } else if (id == R.id.nav_manage) {
-
-        }
+        } 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

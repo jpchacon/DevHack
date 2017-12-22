@@ -25,21 +25,17 @@ import co.devhack.helpers.Utilities;
 public class ProgramAdapter extends RecyclerView.Adapter<ProgramAdapter.ProgramsViewHolder>{
 
     private List<Program> dataSet;
-<<<<<<< HEAD
+    private Context context;
+    private static int lastPosition = -1;
+
     private ProgramAdapter.ListenerClickView listenerClickView;
 
     public interface ListenerClickView{
         void click(Program program);
     }
 
-    public ProgramAdapter(List<Program> dataSet, ProgramAdapter.ListenerClickView listenerClickView) {
-=======
-    private Context context;
-    private static int lastPosition = -1;
-
-    public ProgramAdapter(Context context,List<Program> dataSet) {
+    public ProgramAdapter(Context context,List<Program> dataSet, ProgramAdapter.ListenerClickView listenerClickView) {
         this.context = context;
->>>>>>> 394c4c60e10933e75c66e2f0efdf277df9df19ed
         this.dataSet = dataSet;
         this.listenerClickView = listenerClickView;
     }
