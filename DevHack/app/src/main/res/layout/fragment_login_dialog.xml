@@ -13,36 +13,75 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <Button
+            android:id="@+id/btnCloseLogin"
+            android:layout_width="@dimen/size_icon_close"
+            android:layout_height="@dimen/size_icon_close"
+            android:layout_gravity="right"
+            android:background="@drawable/icon_close"/>
+
+        <TextView
+            style="@style/textViewInformationWork"
+            android:layout_marginTop="@dimen/margintop_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_session"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold" />
+
         <ImageView
+            android:id="@+id/iconLogin"
             android:layout_marginTop="@dimen/margintop_layout"
             android:layout_width="@dimen/size_icon_login"
             android:layout_height="@dimen/size_icon_login"
             android:src="@drawable/icon_login"
             android:layout_gravity="center"/>
 
+        <ImageView
+            android:id="@+id/iconLoginSucessfull"
+            android:layout_marginTop="@dimen/margintop_layout"
+            android:layout_width="@dimen/size_icon_login"
+            android:layout_height="@dimen/size_icon_login"
+            android:src="@drawable/icon_login_sucessfull"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilEmailLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/user"/>
+                android:inputType="textEmailAddress"
+                android:hint="@string/email_address"/>
 
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textPassword"
                 android:hint="@string/password"/>
 
         </android.support.design.widget.TextInputLayout>
 
+        <ProgressBar
+            android:id="@+id/progressBarLogin"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
         <Button
+            android:id="@+id/btnLogin"
             android:theme="@style/RaisedButtonDark"
             android:layout_width="@dimen/width_button_signup"
             android:layout_height="wrap_content"
@@ -50,6 +89,25 @@
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/margintop_layout"
             android:layout_marginBottom="@dimen/margintop_layout"/>
+
+        <TextView
+            android:id="@+id/msjAlerta"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textSize="@dimen/text_zise_cardview"/>
+
+        <Button
+            android:id="@+id/btnAcepta"
+            android:theme="@style/RaisedButtonDark"
+            android:layout_width="@dimen/width_button_signup"
+            android:layout_height="wrap_content"
+            android:text="@string/to_accept"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margintop_layout"
+            android:layout_marginBottom="@dimen/margintop_layout"
+            android:visibility="gone"/>
 
     </LinearLayout>
 

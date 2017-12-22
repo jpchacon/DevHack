@@ -23,7 +23,7 @@
     <string name="email_read_user">El correo en el que nos leerás?</string>
     <string name="user_contact_number">Número al que nos podamos contactar?</string>
     <string name="send">Enviar</string>
-    <string name="user">Usuario</string>
+    <string name="email_address">Email</string>
     <string name="password">Contraseña</string>
     <string name="enter">Ingresar</string>
     <string name="company">Empresa:</string>
@@ -34,5 +34,9 @@
     <string name="modality">Modalidad:</string>
     <string name="date">Fecha:</string>
     <string name="city">Ciudad:</string>
+    <string name="start_session">Iniciar Seción</string>
+    <string name="to_accept">Aceptar</string>
+    <string name="is_required">Es requerido</string>
+    <string name="succesfull_login">Usted inicio sesión correctamente</string>
 
 </resources>

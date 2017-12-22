@@ -11,15 +11,17 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import co.devhack.R;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SignUpDialog extends DialogFragment {
+public class SignUpDialog extends DialogFragment implements View.OnClickListener{
 
     private View view;
+    private Button btnCloseSignUp;
 
 
     public SignUpDialog() {
@@ -33,6 +35,10 @@ public class SignUpDialog extends DialogFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         view = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_sign_up_dialog,null);
+
+        btnCloseSignUp = view.findViewById(R.id.btnCloseSignUp);
+
+        btnCloseSignUp.setOnClickListener(this);
     }
 
 
@@ -50,4 +56,12 @@ public class SignUpDialog extends DialogFragment {
         return builder.create();
     }
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.btnCloseSignUp:
+                dismiss();
+                break;
+        }
+    }
 }

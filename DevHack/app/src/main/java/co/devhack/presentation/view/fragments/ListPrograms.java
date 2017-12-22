@@ -60,6 +60,7 @@ public class ListPrograms extends Fragment implements ListProgramContract.View{
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         rvListProgram.setLayoutManager(layoutManager);
 
+<<<<<<< HEAD
         ProgramAdapter programAdapter = new ProgramAdapter(mActionsListener.getLstPrograms(),
                 new ProgramAdapter.ListenerClickView(){
 
@@ -68,6 +69,9 @@ public class ListPrograms extends Fragment implements ListProgramContract.View{
                         mListenerCallback.replaceFragmentMainActivity(program);
                     }
                 });
+=======
+        ProgramAdapter programAdapter = new ProgramAdapter(getContext(),mActionsListener.getLstPrograms());
+>>>>>>> 394c4c60e10933e75c66e2f0efdf277df9df19ed
         rvListProgram.setAdapter(programAdapter);
 
         mActionsListener.loadAll();

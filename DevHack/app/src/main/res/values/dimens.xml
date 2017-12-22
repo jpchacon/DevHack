@@ -23,6 +23,7 @@
     <dimen name="size_icon_login">80dp</dimen>
     <dimen name="marginLeft_layout_contacts">40dp</dimen>
     <dimen name="width_button_signup">180dp</dimen>
+    <dimen name="size_icon_close">35dp</dimen>
 
 
 </resources>
