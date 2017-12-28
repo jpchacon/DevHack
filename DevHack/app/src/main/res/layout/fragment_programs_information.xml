@@ -1,168 +1,182 @@
-<LinearLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-    android:layout_marginRight="@dimen/activity_horizontal_margin"
     tools:context="co.devhack.presentation.view.fragments.ProgramsInformation">
 
-    <ImageView
-        android:id="@+id/ivLogoProgram"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:src="@mipmap/ic_launcher"
-        android:layout_marginTop="@dimen/margintop_layout"/>
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="@dimen/margintop_layout">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
 
+        <ImageView
+            android:id="@+id/ivLogoProgram"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginTop="@dimen/margintop_layout"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margintop_layout">
+
+
+            <TextView
+                style="@style/textViewInformationWork"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Programa:"
+                android:layout_marginLeft="20dp"/>
+
+
+            <TextView
+                style="@style/textViewInformationWork"
+                android:id="@+id/tvProgram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frontend Angular"
+                android:layout_marginLeft="@dimen/marginleft_text"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margintop_informations">
+
+            <TextView
+                style="@style/textViewInformationWork"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inicia:"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                style="@style/textViewInformationWork"
+                android:id="@+id/tvStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01 de Enero de 2018"
+                android:layout_marginLeft="@dimen/marginleft_text"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/textViewInformationWork"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Duración:"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                style="@style/textViewInformationWork"
+                android:id="@+id/tvDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9 Dias"
+                android:layout_marginLeft="@dimen/marginleft_text"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/textViewInformationWork"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Horarios:"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                style="@style/textViewInformationWork"
+                android:id="@+id/tvSchedules"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:text="Lunes, Miercoles y viernes 6 - 10 pm"
+                android:layout_marginLeft="@dimen/marginleft_text"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/textViewInformationWork"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inversión:"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                style="@style/textViewInformationWork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$"
+                android:layout_marginLeft="@dimen/marginleft_text"/>
+
+            <TextView
+                style="@style/textViewInformationWork"
+                android:id="@+id/tvInvestment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="650.000"
+                android:layout_marginLeft="@dimen/marginleft_text"/>
+
+            <TextView
+                style="@style/textViewInformationWork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pesos"
+                android:layout_marginLeft="@dimen/marginleft_text"/>
+
+        </LinearLayout>
 
         <TextView
             style="@style/textViewInformationWork"
             android:textStyle="bold"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Programa:"
-            android:layout_marginLeft="20dp"/>
+            android:gravity="center"
+            android:text="Contenido"
+            android:layout_marginTop="@dimen/margintop_informations"/>
 
-
-        <TextView
-            style="@style/textViewInformationWork"
-            android:id="@+id/tvProgram"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Frontend Angular"
-            android:layout_marginLeft="@dimen/marginleft_text"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvContentList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
     </LinearLayout>
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="@dimen/margintop_informations">
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/icon_enroll" />
 
-        <TextView
-            style="@style/textViewInformationWork"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Inicia:"
-            android:layout_marginLeft="20dp"/>
-
-        <TextView
-            style="@style/textViewInformationWork"
-            android:id="@+id/tvStartDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="01 de Enero de 2018"
-            android:layout_marginLeft="@dimen/marginleft_text"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            style="@style/textViewInformationWork"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Duración:"
-            android:layout_marginLeft="20dp"/>
-
-        <TextView
-            style="@style/textViewInformationWork"
-            android:id="@+id/tvDuration"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="9 Dias"
-            android:layout_marginLeft="@dimen/marginleft_text"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            style="@style/textViewInformationWork"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Horarios:"
-            android:layout_marginLeft="20dp"/>
-
-        <TextView
-            style="@style/textViewInformationWork"
-            android:id="@+id/tvSchedules"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
-            android:text="Lunes, Miercoles y viernes 6 - 10 pm"
-            android:layout_marginLeft="@dimen/marginleft_text"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            style="@style/textViewInformationWork"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Inversión:"
-            android:layout_marginLeft="20dp"/>
-
-        <TextView
-            style="@style/textViewInformationWork"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="$"
-            android:layout_marginLeft="@dimen/marginleft_text"/>
-
-        <TextView
-            style="@style/textViewInformationWork"
-            android:id="@+id/tvInvestment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="650.000"
-            android:layout_marginLeft="@dimen/marginleft_text"/>
-
-        <TextView
-            style="@style/textViewInformationWork"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pesos"
-            android:layout_marginLeft="@dimen/marginleft_text"/>
-
-    </LinearLayout>
-
-    <TextView
-        style="@style/textViewInformationWork"
-        android:textStyle="bold"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Contenido"
-        android:layout_marginTop="@dimen/margintop_informations"/>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvContentList"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

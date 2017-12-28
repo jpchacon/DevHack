@@ -1,8 +1,10 @@
 package co.devhack.helpers;
 
+import co.devhack.repository.impl.ProgramRestPost;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static co.devhack.helpers.Constants.API_POST;
 import static co.devhack.helpers.Constants.API_URI;
 
 /**
@@ -15,7 +17,7 @@ public class RetrofitSingleton {
 
     public static Retrofit getInstance() {
         if(retrofit == null) {
-            retrofit = getInstance(API_URI);
+            retrofit = getInstance();
         }
 
         return retrofit;
@@ -26,5 +28,9 @@ public class RetrofitSingleton {
                 .baseUrl(baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
+    }
+
+    public static ProgramRestPost.APIService getApiService(){
+        return RetrofitSingleton.getInstance(API_POST).create(ProgramRestPost.APIService.class);
     }
 }

@@ -14,6 +14,8 @@ import retrofit2.http.GET;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
+import static co.devhack.helpers.Constants.API_URI;
+
 /**
  * Created by Juanpa on 16/12/2017.
  */
@@ -28,7 +30,7 @@ public class WorkRestRepository implements WorkRepository {
 
     @Override
     public HashMap<String, Work> getAll() throws Exception {
-        Retrofit retrofit = RetrofitSingleton.getInstance();
+        Retrofit retrofit = RetrofitSingleton.getInstance(API_URI);
         WorkService workService = retrofit.create(WorkService.class);
         Call<HashMap<String, Work>> call = workService.getAll();
 

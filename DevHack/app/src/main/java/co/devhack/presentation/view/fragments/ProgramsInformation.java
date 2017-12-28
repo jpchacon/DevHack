@@ -3,6 +3,7 @@ package co.devhack.presentation.view.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -20,16 +21,19 @@ import co.devhack.helpers.Utilities;
 import co.devhack.presentation.interfaces.ProgramInformationContract;
 import co.devhack.presentation.presenters.ProgramInformationPresenter;
 import co.devhack.presentation.view.adapters.DetailProgramAdapter;
+import co.devhack.presentation.view.dialog.SignUpDialog;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ProgramsInformation extends Fragment implements ProgramInformationContract.View{
+public class ProgramsInformation extends Fragment implements ProgramInformationContract.View, SignUpDialog.OnFinishListener,
+        View.OnClickListener{
 
     private ProgramInformationContract.UserActionsListener mActionsListener;
     private String image, name, startDate, duration;
     private String schedules, investment, id;
     private RecyclerView rvContentList;
+    private FloatingActionButton fab;
 
     private static final String IMAGE = "image";
     private static final String NAME = "name";
@@ -88,6 +92,9 @@ public class ProgramsInformation extends Fragment implements ProgramInformationC
         tvDuration = view.findViewById(R.id.tvDuration);
         tvSchedules = view.findViewById(R.id.tvSchedules);
         tvInvestment = view.findViewById(R.id.tvInvestment);
+        fab = view.findViewById(R.id.fab);
+
+        fab.setOnClickListener(this);
 
         rvContentList = view.findViewById(R.id.rvContentList);
 
@@ -113,7 +120,29 @@ public class ProgramsInformation extends Fragment implements ProgramInformationC
     }
 
     @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.fab:
+                goToOnSignUp();
+                break;
+        }
+    }
+
+    public void goToOnSignUp(){
+        SignUpDialog signUpDialog = SignUpDialog.getInstance(this);
+        signUpDialog.show(getFragmentManager(),null);
+    }
+
+    @Override
     public void refreshDetails() {
         rvContentList.getAdapter().notifyDataSetChanged();
+    }
+
+
+    @Override
+    public void onFinissh(boolean success) {
+        if (success){
+            fab.setVisibility(View.GONE);
+        }
     }
 }

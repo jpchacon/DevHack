@@ -15,4 +15,6 @@ public interface ProgramUseCase {
     void getAll(Callback<List<Program>> callback);
 
     void getDetails(Callback<List<Modules>> callback, String program);
+
+    void sentPost(String curso, String celular, String email, String nombre, Callback<Boolean> callback);
 }

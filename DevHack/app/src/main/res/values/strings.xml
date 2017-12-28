@@ -38,5 +38,6 @@
     <string name="to_accept">Aceptar</string>
     <string name="is_required">Es requerido</string>
     <string name="succesfull_login">Usted inicio sesión correctamente</string>
+    <string name="succesfull_signup">Usted se ha registrado con exito</string>
 
 </resources>

@@ -7,10 +7,13 @@ import java.util.List;
 
 import co.devhack.domain.model.Modules;
 import co.devhack.domain.model.Program;
+import co.devhack.domain.model.SignUpProgram;
 import co.devhack.domain.usecase.ProgramUseCase;
 import co.devhack.helpers.Callback;
 import co.devhack.helpers.ThreadExecutor;
+import co.devhack.repository.ProgramPost;
 import co.devhack.repository.ProgramRepository;
+import co.devhack.repository.impl.ProgramRestPost;
 import co.devhack.repository.impl.ProgramRestRepository;
 
 /**
@@ -20,9 +23,11 @@ import co.devhack.repository.impl.ProgramRestRepository;
 public class ProgramUseCaseImpl implements ProgramUseCase {
 
     private ProgramRepository programRepository;
+    private ProgramPost programPost;
 
     public ProgramUseCaseImpl() {
         this.programRepository = new ProgramRestRepository();
+        this.programPost = new ProgramRestPost();
     }
 
     @Override
@@ -86,6 +91,33 @@ public class ProgramUseCaseImpl implements ProgramUseCase {
                 } else {
                     callback.success(result);
                 }
+            }
+        }).execute();
+    }
+
+    @Override
+    public void sentPost(final String curso, final String celular, final String email, final String nombre, final Callback<Boolean> callback) {
+        new ThreadExecutor<SignUpProgram>(new ThreadExecutor.Task<SignUpProgram>() {
+            @Override
+            public SignUpProgram execute() throws Exception {
+
+                programPost.postData(curso, celular, email, nombre, new Callback<Boolean>() {
+                    @Override
+                    public void success(Boolean result) {
+                        callback.success(result);
+                    }
+
+                    @Override
+                    public void error(Exception error) {
+                        callback.error(error);
+                    }
+                });
+                return null;
+            }
+
+            @Override
+            public void finish(Exception error, SignUpProgram result) {
+
             }
         }).execute();
     }

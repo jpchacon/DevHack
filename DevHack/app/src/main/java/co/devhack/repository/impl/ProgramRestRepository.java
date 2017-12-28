@@ -13,6 +13,8 @@ import retrofit2.Retrofit;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
+import static co.devhack.helpers.Constants.API_URI;
+
 /**
  * Created by Juanpa on 16/12/2017.
  */
@@ -30,7 +32,7 @@ public class ProgramRestRepository  implements ProgramRepository {
 
     @Override
     public HashMap<String, Program> getAll() throws Exception {
-        Retrofit retrofit = RetrofitSingleton.getInstance();
+        Retrofit retrofit = RetrofitSingleton.getInstance(API_URI);
         ProgramService programService = retrofit.create(ProgramService.class);
         Call<HashMap<String, Program>> call = programService.getAll();
 
@@ -41,7 +43,7 @@ public class ProgramRestRepository  implements ProgramRepository {
 
     @Override
     public HashMap<String, List<Modules>> getDetails(String program) throws Exception{
-        Retrofit retrofit = RetrofitSingleton.getInstance();
+        Retrofit retrofit = RetrofitSingleton.getInstance(API_URI);
         ProgramService programService = retrofit.create(ProgramService.class);
         Call<HashMap<String, List<Modules>>> call = programService.getDetails(program);
 

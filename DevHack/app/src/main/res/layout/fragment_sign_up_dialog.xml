@@ -53,7 +53,8 @@
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/nameUserProgram">
 
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
@@ -64,7 +65,8 @@
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/emailUserProgram">
 
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
@@ -75,7 +77,8 @@
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/numberUserProgram">
 
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
@@ -84,12 +87,32 @@
 
         </android.support.design.widget.TextInputLayout>
 
+        <TextView
+            android:id="@+id/msjAlertaPrograma"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textSize="@dimen/text_zise_cardview"/>
+
         <Button
+            android:id="@+id/sendDataUserProgram"
             android:theme="@style/RaisedButtonDark"
             android:layout_width="@dimen/width_button_signup"
             android:layout_height="wrap_content"
             android:text="@string/send"
             android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margintop_layout"
+            android:layout_marginBottom="@dimen/margintop_layout"/>
+
+        <Button
+            android:id="@+id/btnAceptaRegistro"
+            android:theme="@style/RaisedButtonDark"
+            android:layout_width="@dimen/width_button_signup"
+            android:layout_height="wrap_content"
+            android:text="@string/to_accept"
+            android:layout_gravity="center"
+            android:visibility="gone"
             android:layout_marginTop="@dimen/margintop_layout"
             android:layout_marginBottom="@dimen/margintop_layout"/>
 
