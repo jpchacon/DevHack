@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import co.devhack.R;
@@ -24,14 +25,19 @@ import co.devhack.presentation.presenters.SignUpProgramPresenter;
  */
 public class SignUpDialog extends DialogFragment implements SignUpProgramContract.View ,View.OnClickListener{
 
+
+
     public interface OnFinishListener {
         void onFinissh(boolean success);
     }
+
+    private static String idProgram;
 
     private View view;
     private Button btnCloseSignUp;
     private Button sendDataUserProgram;
     private Button btnAceptaRegistro;
+    private ProgressBar progressSignUp;
     private SignUpDialog.OnFinishListener listener;
     private SignUpProgramContract.UserActionsListener mActionListener;
 
@@ -45,9 +51,10 @@ public class SignUpDialog extends DialogFragment implements SignUpProgramContrac
     public SignUpDialog() {
     }
 
-    public static SignUpDialog getInstance(SignUpDialog.OnFinishListener listener){
+    public static SignUpDialog getInstance(SignUpDialog.OnFinishListener listener, String id){
         SignUpDialog signUpDialog = new SignUpDialog();
         signUpDialog.setListener(listener);
+        idProgram = id;
         return signUpDialog;
     }
     public void setListener(SignUpDialog.OnFinishListener listener) {
@@ -68,10 +75,12 @@ public class SignUpDialog extends DialogFragment implements SignUpProgramContrac
         numberUserProgram = view.findViewById(R.id.numberUserProgram);
         btnAceptaRegistro = view.findViewById(R.id.btnAceptaRegistro);
         msjAlertaPrograma = view.findViewById(R.id.msjAlertaPrograma);
+        progressSignUp = view.findViewById(R.id.progressSignUp);
 
         btnCloseSignUp.setOnClickListener(this);
         sendDataUserProgram.setOnClickListener(this);
         btnAceptaRegistro.setOnClickListener(this);
+
     }
 
 
@@ -138,10 +147,19 @@ public class SignUpDialog extends DialogFragment implements SignUpProgramContrac
         listener.onFinissh(false);
     }
 
+    @Override
+    public void showProgressbar() {
+        progressSignUp.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideProgressbar() {
+        progressSignUp.setVisibility(View.GONE);
+    }
+
     private void onSignUp(){
         try {
             boolean result = true;
-            String curso = "android";
             String celular = numberUserProgram.getEditText().getText().toString();
             String email = emailUserProgram.getEditText().getText().toString();
             String nombre = nameUserProgram.getEditText().getText().toString();
@@ -173,7 +191,7 @@ public class SignUpDialog extends DialogFragment implements SignUpProgramContrac
                 nameUserProgram.setErrorEnabled(false);
             }
             if (result){
-                mActionListener.onSignUp(curso,celular,email,nombre);
+                mActionListener.onSignUp(idProgram.toLowerCase(),celular,email,nombre);
             }
 
         }catch (Exception e){

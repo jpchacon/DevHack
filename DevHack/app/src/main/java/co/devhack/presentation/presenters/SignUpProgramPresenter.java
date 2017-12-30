@@ -21,16 +21,24 @@ public class SignUpProgramPresenter implements SignUpProgramContract.UserActions
 
     @Override
     public void onSignUp(String curso, String celular, String email, String nombre) {
-        useCase.sentPost(curso, celular, email, nombre, new Callback<Boolean>() {
-            @Override
-            public void success(Boolean result) {
-                view.sucessfull();
-            }
+        if (view != null){
 
-            @Override
-            public void error(Exception error) {
-                view.showMenssageError(error);
-            }
-        });
+            view.showProgressbar();
+
+            useCase.sentPost(curso, celular, email, nombre, new Callback<Boolean>() {
+                @Override
+                public void success(Boolean result) {
+                    view.hideProgressbar();
+                    view.sucessfull();
+                }
+
+                @Override
+                public void error(Exception error) {
+                    view.hideProgressbar();
+                    view.showMenssageError(error);
+                }
+            });
+        }
+
     }
 }

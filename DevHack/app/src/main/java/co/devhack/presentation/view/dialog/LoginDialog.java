@@ -34,7 +34,6 @@ public class LoginDialog extends DialogFragment implements LoginDialogContract.V
     private LoginDialog.OnFinishListener listener;
 
     private View view;
-
     private TextInputLayout email;
     private TextInputLayout password;
     private ProgressBar progressBarLogin;
@@ -44,7 +43,6 @@ public class LoginDialog extends DialogFragment implements LoginDialogContract.V
     private TextView msjAlerta;
     private ImageView imageLogin;
     private ImageView imageLoginSucessfull;
-
 
     public LoginDialog() {
     }
@@ -114,6 +112,7 @@ public class LoginDialog extends DialogFragment implements LoginDialogContract.V
 
     @Override
     public void sucessfull() {
+        btnCloseLogin.setVisibility(View.GONE);
         email.setVisibility(View.GONE);
         password.setVisibility(View.GONE);
         btnLogin.setVisibility(View.GONE);

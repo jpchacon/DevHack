@@ -7,10 +7,10 @@ package co.devhack.presentation.interfaces;
 public interface SignUpProgramContract {
     interface View{
         void sucessfull();
-
         void showMenssageError(Exception error);
 
-
+        void showProgressbar();
+        void hideProgressbar();
     }
     interface UserActionsListener{
         void onSignUp(String curso, String celular, String email, String nombre);

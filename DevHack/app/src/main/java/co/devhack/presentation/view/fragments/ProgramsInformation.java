@@ -129,7 +129,7 @@ public class ProgramsInformation extends Fragment implements ProgramInformationC
     }
 
     public void goToOnSignUp(){
-        SignUpDialog signUpDialog = SignUpDialog.getInstance(this);
+        SignUpDialog signUpDialog = SignUpDialog.getInstance(this,id);
         signUpDialog.show(getFragmentManager(),null);
     }
 
