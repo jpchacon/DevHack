@@ -4,6 +4,7 @@ package co.devhack.presentation.view.fragments;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -56,9 +57,12 @@ public class ListPrograms extends Fragment implements ListProgramContract.View{
 
         rvListProgram = view.findViewById(R.id.rvListProgram);
 
+        /**
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         rvListProgram.setLayoutManager(layoutManager);
+         */
+        rvListProgram.setLayoutManager(new GridLayoutManager(getContext(),2));
 
         ProgramAdapter programAdapter = new ProgramAdapter(getContext(),mActionsListener.getLstPrograms(),
                 new ProgramAdapter.ListenerClickView(){

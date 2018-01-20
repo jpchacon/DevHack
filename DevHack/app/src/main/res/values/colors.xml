@@ -8,4 +8,5 @@
     <color name="error_email">#ff0000</color>
     <color name="success_email">#0b9909</color>
     <color name="colorBlackItem">#212121</color>
+    <color name="colorBackgroundLinear">#53292929</color>
 </resources>

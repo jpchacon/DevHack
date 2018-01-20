@@ -3,12 +3,10 @@
 
     <item
         android:drawable="@android:color/white"/>
-
     <item>
         <bitmap
             android:gravity="center"
             android:src="@drawable/logo_devhack_full_png" />
     </item>
-
 
 </layer-list>

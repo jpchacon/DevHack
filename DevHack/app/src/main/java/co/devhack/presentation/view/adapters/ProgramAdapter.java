@@ -42,7 +42,7 @@ public class ProgramAdapter extends RecyclerView.Adapter<ProgramAdapter.Programs
 
     @Override
     public ProgramsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_programs, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_programs_new, parent, false);
         return new ProgramsViewHolder(view);
     }
 
@@ -54,7 +54,7 @@ public class ProgramAdapter extends RecyclerView.Adapter<ProgramAdapter.Programs
             Glide.with(holder.itemView).load(program.getImage()).into(holder.ivLogoProgram);
         }
         holder.tvProgram.setText(program.getName());
-        holder.tvStartDate.setText(program.getStartDate().toString());
+        //holder.tvStartDate.setText(program.getStartDate().toString());
         holder.tvDuration.setText(program.getDuration());
 
         setAnimation(holder.cardViewPrograms,position);
@@ -77,7 +77,7 @@ public class ProgramAdapter extends RecyclerView.Adapter<ProgramAdapter.Programs
             cardViewPrograms = itemView.findViewById(R.id.cardViewPrograms);
             ivLogoProgram = itemView.findViewById(R.id.ivLogoProgram);
             tvProgram = itemView.findViewById(R.id.tvProgram);
-            tvStartDate = itemView.findViewById(R.id.tvStartDate);
+            //tvStartDate = itemView.findViewById(R.id.tvStartDate);
             tvDuration = itemView.findViewById(R.id.tvDuration);
 
             itemView.setOnClickListener(new View.OnClickListener() {

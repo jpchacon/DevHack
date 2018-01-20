@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/cardview_programs_width"
+    android:layout_height="@dimen/cardview_programs_height"
+    android:id="@+id/cardViewPrograms"
+    cardview:cardCornerRadius="@dimen/cornerradius_cardview"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:layout_marginRight="@dimen/activity_vertical_margin">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivLogoProgram"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher_round"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:background="@color/colorBackgroundLinear">
+
+            <TextView
+                android:id="@+id/tvProgram"
+                style="@style/textViewCardView"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Frontend Angular" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textViewInformationCardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Duración:" />
+
+                <TextView
+                    android:id="@+id/tvDuration"
+                    style="@style/textViewCardView"
+                    android:layout_marginLeft="@dimen/marginleft_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="9 Días" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/textViewInformationCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ver detelles"
+                android:layout_gravity="center"
+                android:textStyle="bold|italic"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</android.support.v7.widget.CardView>

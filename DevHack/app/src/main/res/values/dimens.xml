@@ -25,5 +25,8 @@
     <dimen name="width_button_signup">180dp</dimen>
     <dimen name="size_icon_close">35dp</dimen>
 
+    <dimen name="cardview_programs_width">160dp</dimen>
+    <dimen name="cardview_programs_height">180dp</dimen>
+
 
 </resources>
